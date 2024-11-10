@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- gsap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <!-- animated css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- aos animate -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- css -->
+  <link rel="stylesheet" href="./assets/global.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/images/header/logo2.jpeg" type="image/x-icon">
+  <title>GFC</title>
+</head>
+
+<body>
+
+  <!-- header -->
+  <div class="curtain-menu" style="animation-delay: 0.7s">
+    <i class="fa-regular fa-circle-xmark" style="animation-delay: 0.7s"></i>
+    <div class="mobile-links">
+      <a href="#" style="animation-delay: 0.3s">Ana səhifə</a>
+      <a href="#haqqimizda" style="animation-delay: 0.4s">Haqqımızda</a>
+      <a href="#xidmet" style="animation-delay: 0.5s">Xidmətlər</a>
+      <a href="#telimcards" style="animation-delay: 0.6s">Təlimlər</a>
+      <a href="#" style="animation-delay: 0.8s">Əlaqə</a>
+    </div>
+  </div>
+
+
+  <header class="header" id="header" #header>
+    <i class="fa-solid fa-bars"></i>
+    <div class="container">
+      <div class="nav-links">
+        <a href="">Ana səhifə</a>
+        <a href="#haqqimizda">Haqqımızda</a>
+        <a href="#xidmet">Xidmətlər</a>
+        <a href="#telimcards">Təlimlər</a>
+        <div class="dropdown">
+          <a href="#" class="dropdown-btn">Əlaqə</a>
+          <div class="dropdown-content">
+            <a href=""><i class="fa-solid fa-phone"></i></a>
+            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+            <a href=""> <i class="fa-brands fa-linkedin"></i></a>
+            <a href=""> <i class="fa-brands fa-instagram"></i></a>
+            <a href=""> <i class="fa-brands fa-facebook"></i></a>
+            <a href=""> <i class="fa-brands fa-twitter"></i></a>
+            <a href=""> <i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search" placeholder="Search" onkeyup="searchProjects()">
+          <i class="fa fa-search" aria-hidden="true"></i> <!-- Font Awesome simgesi -->
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <section class="introduction">
+
+  </section>
+  
+
+
+  <!-- about -->
+  <section class="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-left col-12 col-md-6 col-lg-6">
+          <h1 class="py-5 my-md-5">Haqqımızda</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur deleniti vel eaque, quod cumque
+            suscipit impedit laboriosam eveniet accusantium dolores fuga ipsa veniam unde quibusdam, asperiores quia
+            animi in possimus.</p>
+            <div class="accordion py-5">
+              <div class="accordion-item">
+                <input type="checkbox" id="item1">
+                <label for="item1" class="accordion-header">Başlık 1</label>
+                <div class="accordion-content">
+                  İçerik 1: Buraya istediğiniz içeriği ekleyebilirsiniz.
+                </div>
+              </div>
+              <div class="accordion-item">
+                <input type="checkbox" id="item2">
+                <label for="item2" class="accordion-header">Başlık 2</label>
+                <div class="accordion-content">
+                  İçerik 2: Buraya istediğiniz içeriği ekleyebilirsiniz.
+                </div>
+              </div>
+              <div class="accordion-item">
+                <input type="checkbox" id="item3">
+                <label for="item3" class="accordion-header">Başlık 3</label>
+                <div class="accordion-content">
+                  İçerik 3: Buraya istediğiniz içeriği ekleyebilirsiniz.
+                </div>
+              </div>
+            </div>
+            <button class="ab-btn1">Contact Us</button>
+          <button class="ab-btn2">Get a Quote</button>
+        </div>
+        <div class="about-right col-12 col-md-6 col-lg-6">
+<img src="./assets/images/haqqimizda/bg-hand-mobile.jpg" alt="" class="about-img">
+        </div>
+      </div>
+</div>
+
+  </section>
+
+  <!-- experience -->
+   <section class="experience">
+    <div class="container">
+<div class="row">
+  <div class="col-6 col-md-6 col-lg-4">
+    <h1 class="text-white-50">150+</h1>
+    <h4 class="text-white">Clients</h4>
+  </div>
+  <div class="col-6 col-md-6 col-lg-4">
+    <h1 class="text-white-50">280+</h1>
+    <h4 class="text-white">Cases</h4>
+  </div>
+  <div class="col-6 col-md-6 col-lg-4">
+    <h1 class="text-white-50">20+</h1>
+    <h4 class="text-white">Years Experience</h4>
+  </div>
+</div>
+   </section>
+
+  <!-- xidmetler -->
+  <section id="xidmet" class="xidmet">
+
+
+    <div class="slider">
+
+
+      <div class="list">
+
+        <div class="item">
+          <img src="./assets/images/xidmetler/xidmetbg1.jpeg" alt="">
+
+          <div class="content">
+            <div class="title">Mühasibatlıq xidmətləri</div>
+            <div class="description">
+              <ul>
+                <li>Mühasibat uçotunun aparılması</li>
+                <li>Vergi və maliyyə hesabatlarının təqdim edilməsi</li>
+                <li>Bank ödənişləri, gömrük əməliyyatları və s. işlərin görülməsi</li>
+                <li>Gündəlik mühasibatlığın tələbinə uyğun sənədlərin tərtib edilməsi</li>
+                <li>Anbar (mal-material) uçotunun aparılması </li>
+              </ul>
+              <button class="etrafli">
+                Ətraflı
+              </button>
+            </div>
+
+          </div>
+          <h1>01</h1>
+        </div>
+
+        <div class="item item2">
+          <img src="./assets/images/xidmetler/xidmetbg1.jpeg" alt="">
+
+          <div class="content">
+            <div class="title">Vergi xidmətləri</div>
+            <div class="description">
+              <ul>
+                <li>Vergi orqanlarının tələb etdiyi sənədləşmələrin icrası</li>
+                <li>Vergi orqanları ilə danışıqların aparlıması</li>
+                <li>Vergi əməliyyatlarının icra edilməsi</li>
+                <li>Səyyar vergi yoxlamaları zamanı təmsilçilik</li>
+              </ul>
+              <button class="etrafli">
+                Ətraflı
+              </button>
+            </div>
+
+          </div>
+          <h1>02</h1>
+        </div>
+
+        <div class="item">
+          <img src="./assets/images/xidmetler/xidmetbg1.jpeg" alt="">
+
+          <div class="content">
+            <div class="title">Audit xidmətləri</div>
+            <div class="description">
+              <ul>
+                <li>Azərbaycan Respublikası Auditorlar Palatasının rəsmi üzvü olaraq auditin edilməsi</li>
+                <li>İcbari Audit-Maliyyə hesabatlarının illik auditinin edilməsi</li>
+                <li>Vergi yoxlamaları öncəsi şirkətin daxili auditi, vergi risklərinin aşkarlanması, həll edilməsi</li>
+                <li>İnsan Resurslarının Audit edilməsi</li>
+              </ul>
+              <button class="etrafli">
+                Ətraflı
+              </button>
+            </div>
+
+
+          </div>
+          <h1>03</h1>
+        </div>
+
+        <div class="item">
+          <img src="./assets/images/xidmetler/xidmetbg1.jpeg" alt="">
+
+          <div class="content">
+            <div class="title">HR xidmətləri</div>
+            <div class="description">
+              <ul>
+                <li>İnsan Resurslarına dair uçotun qurulması</li>
+                <li>İnsan Resurslarına dair sənədləşmələrin aparılması</li>
+                <li>Əmas-ın yoxlanması, sənədlər, fakt və portal arasın fərqlərin aşkarlanması və düzəldilməsi</li>
+              </ul>
+              <button class="etrafli">
+                Ətraflı
+              </button>
+            </div>
+
+          </div>
+          <h1>04</h1>
+        </div>
+
+        <div class="item">
+          <img src="./assets/images/xidmetler/xidmetbg1.jpeg" alt="">
+
+          <div class="content">
+            <div class="title">Uçot proqramının tətbiqi</div>
+            <div class="description">
+              <ul>
+                <li>Mühasibat və Vergi uçotunun qurulması</li>
+                <li>Mühasibat və Vergi uçotunun aparlımasına dair uçot proqramın yazılması</li>
+                <li>1C proqramının yazılması, təlimi, tətbiqi</li>
+              </ul>
+              <button class="etrafli">
+                Ətraflı
+              </button>
+            </div>
+
+          </div>
+          <h1>05</h1>
+        </div>
+
+        <div class="item">
+          <img src="./assets/images/xidmetler/xidmetbg1.jpeg" alt="">
+
+          <div class="content">
+            <div class="title">Hüquq xidmətləri</div>
+            <div class="description">
+              <ul>
+                <li>Vergi və mühasibatlığa dair məhkəmə mübahisələri</li>
+                <li>Miqrasiya sənədlərinin hazırlanması</li>
+                <li>Müqavilələrin hazırlanması, yoxlanması, risk analizi</li>
+                <li>Şirkətlərin yaradılması, ləğvi və konsultasiya</li>
+                <li>Xarici vətəndaşlar üçün şirkətlərin yaradılması və konsultasiya</li>
+              </ul>
+              <button class="etrafli">
+                Ətraflı
+              </button>
+            </div>
+
+
+          </div>
+          <h1>06</h1>
+        </div>
+
+      </div>
+
+
+      <div class="thumbnail">
+
+        <div class="item ">
+          <img src="./assets/images/xidmetler/muhasibat1.jpeg" alt="">
+          <h2 class="ms-2">Mühasibatlıq xidməti</h2>
+
+        </div>
+        <div class="item xidmet2">
+          <img src="./assets/images/xidmetler/vergi1.jpeg" alt="">
+          <h2 class="ms-5">Vergi xidməti</h2>
+
+        </div>
+        <div class="item">
+          <img src="./assets/images/xidmetler/audit1.jpeg" alt="">
+          <h2 class="ms-5 px-1">Audit xidməti</h2>
+
+        </div>
+        <div class="item">
+          <img src="./assets/images/xidmetler/hr1.jpeg" alt="">
+          <h2 class="ms-5">HR xidməti</h2>
+        </div>
+        <div class="item">
+          <img src="./assets/images/xidmetler/ucot1.jpeg" alt="">
+          <h2 class="ms-4 px-4">Uçot proqramı</h2>
+        </div>
+        <div class="item">
+          <img src="./assets/images/xidmetler/huquq1.jpeg" alt="">
+          <h2 class="ms-4 px-3">Hüquq xidməti</h2>
+        </div>
+
+      </div>
+
+
+      <div class="nextPrevArrows">
+        <button class="prev">
+          < </button>
+            <button class="next"> > </button>
+      </div>
+
+
+
+    </div>
+
+  </section>
+
+  <!-- telimler -->
+  <section class="telimler" id="telimcards">
+
+    <div class="container">
+      <div class="card">
+        <img src="./assets/images/telimler/telimler1.png" alt="">
+        <div class="intro">
+          <h1 class="text-center">Təlimlər haqqında</h1>
+          <p>
+          <ul>
+            <li>Öncəliklə bildirmək istəyirik ki, təlimçilərimiz kifayət qədərə peşakar, təcrübəli, 10-15 illik praktik
+              olaraq iş və təlim təcrübəsinə malik mütəxəsislər tərəfindən keçilir.</li>
+            <li>Təlimlərimiz sizi nəzəri cəhətdən məlumatlandırmaq yox, praktik olaraq yetişdirmək, yeni işlərə
+              yiyələnmək,
+              masa arxasında əyləşib işlərinizi rahatlıqla görə bilməyiniz üçündür</li>
+            <li>Təlimlərimizdə özünüzü dərs otaqlarında deyil, praktik olaraq şirkətdə hiss edəcəksiz.</li>
+            <li>Təlim proqramızla tanış olduqdan sonra mütəxisi kimi işə hazır mühasib, baş mühasib və HR mütəxəsis
+              olaraq
+              təkmilləşəcəyinizə əmin olacaqsız.</li>
+
+          </ul>
+          </p>
+        </div>
+
+      </div>
+      <div class="card">
+        <img src="./assets/images/telimler/telimler1.jpeg" alt="">
+        <div class="intro">
+          <h1 class="text-center">Təlimlərimiz</h1>
+          <p>
+          <ul>
+            <li>"Mühasib ol" proqramı
+              Bu təlimdə siz mühasib kimi bacarıqlara yiyələnərək sərbəst şəkildə mühasib işləyə biləcəksiniz.
+              Təlim +10 illik praktik təcrübəyə malik 4 peşakar təlimçi tərəfindən keçrilir. Təlimçilərimiz haqqında
+              məlumatı saytdan əldə edə bilərsiz.
+              Təlim proqramındanda aydın olduğu kimi siz istənilən şirkətdə mühasib kimi sərbəst şəkildə fəaliyyət
+              göstərə və ya ixtisasınızı artıra bilərsiz. (təlim proqramına bax)
+              Təlim həftədə 2 gün 2 saat olmaqla 2,5 ay müddətində keçrilir. Hər saatın tamında 10 dəqiqəlik cofe break
+              fasiləmiz olur.
+            </li>
+            <li>HR təlimləri
+              Bu təlimdə siz sərbəst HR mütəxəsis olaraq işləməyi öyrənəcək və biliklərinizi artıracaqsız. Təlim 2
+              peşəkar +15 illik təcrübəyə malik təlimçi tərəfindən keçilir.
+              Təlim həftədə 2 gün 2 saat olmaqla 2 ay müddətində keçrilir. (təlim proqramına bax)Hər saatın tamamında 10
+              dəqiqəlik cofe break fasiləsi.
+            </li>
+            <li>Təcrübə proqramı
+              Bu proqramda siz şirkətimizə davət olunacaq və şirkətin fəaliyyət prosseslərdə iştirak edəcəksiniz,
+              praktik təcrübə toplayacaqsınız.
+            </li>
+          </ul>
+          </p>
+        </div>
+
+      </div>
+      <div class="card telim3">
+        <img src="./assets/images/telimler/telimci1.jpeg" alt="">
+        <div class="intro">
+          <h1 class="text-center">təlimçilərimiz</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, obcaecati.</p>
+        </div>
+
+      </div>
+      <div class="card telim4">
+        <img src="./assets/images/telimler/coffeebreak1.jpeg" alt="">
+        <div class="intro">
+          <h1 class="text-center">Coffee break</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, obcaecati.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- contact menu -->
+  <div class="contact-menu">
+    <a href=""><i class="fa-solid fa-phone"></i></a>
+    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+    <a href=""> <i class="fa-brands fa-linkedin"></i></a>
+    <a href=""> <i class="fa-brands fa-instagram"></i></a>
+    <a href=""> <i class="fa-brands fa-facebook"></i></a>
+    <a href=""> <i class="fa-brands fa-twitter"></i></a>
+    <a href=""> <i class="fa-brands fa-youtube"></i></a>
+
+  </div>
+
+  <!-- meqaleler -->
+  <div class="meqaleler">
+
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-img">
+      <img src="./assets/images/footer/logo.png" alt="">
+    </div>
+    <div class="footer-links">
+      <a href=""><i class="fa-solid fa-phone"></i></a>
+      <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+      <a href=""> <i class="fa-brands fa-linkedin"></i></a>
+      <a href=""> <i class="fa-brands fa-instagram"></i></a>
+      <a href=""> <i class="fa-brands fa-facebook"></i></a>
+      <a href=""> <i class="fa-brands fa-twitter"></i></a>
+      <a href=""> <i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("Q2OSghbcPsTQOZKv9"); // EmailJS kullanıcı ID'nizi buraya ekleyin
+    })();
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1800,
+    });
+  </script>
+
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
