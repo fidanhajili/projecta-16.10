@@ -187,69 +187,15 @@ cursor: pointer;
 }
 
 /* about */
-.accordion {
-  max-width: 600px;
-  margin: 20px auto;
-  border-radius: 5px;
-  overflow: hidden;
-border: transparent;
-}
-
-.accordion-item:first-child {
-  border-top: none;
-}
-
-.accordion-header {
-  display: block;
-  padding: 15px;
-  background-color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  border-left: transparent;
-  border-right: transparent;
-  border-top: transparent;
-}
-
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  background-color: #fff;
-  transition: max-height 0.3s ease;
-  padding: 0 15px;
-}
-.accordion-item {
-  border-left: transparent;
-  border-right: transparent;
-}
-.accordion-item input[type="checkbox"] {
-  display: none;
-}
-
-.accordion-item input[type="checkbox"]:checked ~ .accordion-content {
-  max-height: 150px; /* İçeriğe göre ayarlayabilirsiniz */
-  padding: 15px;
-}
-
 .about {
   height: 100vh;
 }
 
-.about .about-img {
-  height: 100vh;
-}
-.about button {
-  padding: 10px 20px;
-  border-radius: 20px;
-  background-color: #3581ce;
-  color: #fff;
-  border: transparent;
-}
-
 /* experience */
 .experience {
-  height: 35vh;
+  height: 40vh;
   background: radial-gradient(rgba(7, 9, 48, 0.5), rgba(5, 15, 66, 0.8)), 
-  url('/assets/images/experiences/bg1.jpeg');
+  url('/assets/images/experiences/exp-bg.mp4');
 background-size: cover;
 background-position: center;
 display: flex;
@@ -641,8 +587,9 @@ border-radius: 3px;
   color: #000;
 }
 .telimler .intro ul li {
-  font-weight: 600;
+  font-weight: 200;
   color: #000;
+  font-size: 13px;
 }
 .card:hover {
   cursor: pointer;
@@ -693,8 +640,175 @@ bottom: 0;
 /* meqaleler */
 .meqaleler {
   height: 100vh;
-  background-color: #fff;
+  background: url('./images/meqale/mg-bg.mp4');
+  background-size: cover;
 }
+.mg-left .mg-left-img {
+  width: 250px;
+  border-radius: 50%;
+}
+.mg-left {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+align-items: center;
+}
+
+
+.mg-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.right1-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22px; /* Fotoğraf ile çerçeve arasındaki mesafe */
+  border: 1px solid #fff; /* Dairevi çizgi (border) */
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  height: 120px;
+  margin-bottom: 30px;
+}
+.mg-right .right1 {
+  flex-direction: column;
+  padding: 30px 200px;
+  background-color: #002c58;
+  margin: 30px 0;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+ position: relative;
+ border: 1px solid #fff;
+}
+.right1 p {
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.mg-right img {
+  height: 120%;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: 40px;
+  object-fit: cover; /* Fotoğrafın daireyi doldurması için */
+}
+.right2-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px; /* Fotoğraf ile çerçeve arasındaki mesafe */
+  border: 2px solid #fff; /* Dairevi çizgi (border) */
+  border-right: transparent;
+  border-top: transparent;
+  border-bottom: transparent;
+  height: 120px;
+  margin-bottom: 30px;
+  margin-left: 90px;
+}
+.right2 p {
+  font-size: 10px;
+  white-space: nowrap;
+}
+.mg-right .right2 {
+  padding: 30px 200px;
+  background-color: #002c58;
+  margin: 30px 0;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 1px solid #fff;
+}
+.right3-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px; /* Fotoğraf ile çerçeve arasındaki mesafe */
+  border: 2px solid #fff; /* Dairevi çizgi (border) */
+  border-right: transparent;
+  border-top: transparent;
+  border-bottom: transparent;
+  height: 120px;
+  margin-bottom: 30px;
+  margin-left: 90px;
+}
+.mg-right .right3 {
+  padding: 30px 200px;
+  background-color: #002c58;
+  margin: 30px 0;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 1px solid #fff;
+  
+}
+.right3 p {
+  font-size: 10px;
+  white-space: nowrap;
+}
+.right4-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px; /* Fotoğraf ile çerçeve arasındaki mesafe */
+  border: 2px solid #fff; /* Dairevi çizgi (border) */
+  border-right: transparent;
+  border-top: transparent;
+  border-bottom: transparent;
+  height: 120px;
+  margin-bottom: 30px;
+}
+.mg-right .right4 {
+  padding: 30px 200px;
+  background-color: #002c58;
+  margin: 30px 0;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 1px solid #fff;
+}
+.right4 p {
+  font-size: 10px;
+  white-space: nowrap;
+}
+.long-line1 {
+  margin-left: 20px;
+  width: 150%;
+  height: 2px;
+  background-color: #002c58; /* Çizginin rengi */
+}
+.vertical-line1 {
+  height: 200px; /* Dikey çizginin yüksekliği */
+  width: 2px;
+  background-color: #002c58; /* Çizginin rengi */
+  margin-left: 20px; /* Yatay çizgi ile dikey çizgi arasındaki mesafe */
+}
+.circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Fotoğraf ile çerçeve arasındaki mesafe */
+  border: 8px solid #fff; /* Dairevi çizgi (border) */
+  border-radius: 50%; /* Çerçeveyi dairesel yapmak için */
+  border-left: transparent;
+  border-bottom: transparent;
+  border-top: transparent;
+}
+
+/* blog */
+.blog {
+  height: 100vh;
+}
+
 /* footer */
 .footer {
   height: 25vh;
