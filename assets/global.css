@@ -193,13 +193,22 @@ cursor: pointer;
 
 /* experience */
 .experience {
-  height: 40vh;
-  background: radial-gradient(rgba(7, 9, 48, 0.5), rgba(5, 15, 66, 0.8)), 
-  url('/assets/images/experiences/exp-bg.mp4');
-background-size: cover;
-background-position: center;
-display: flex;
-align-items: center;
+  position: relative;
+  height: 40vh; 
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden; 
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 101%;
+  height: 100%;
+  object-fit: cover; /* Videoyu alanı tamamen kaplayacak şekilde ayarlar */
+  z-index: -1; /* Videoyu içeriklerin arkasına gönderir */
 }
 
 
