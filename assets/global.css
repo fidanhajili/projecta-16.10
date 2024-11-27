@@ -797,7 +797,7 @@ align-items: center;
   justify-content: center;
   align-items: center;
   padding: 20px; /* Fotoğraf ile çerçeve arasındaki mesafe */
-  border: 8px solid #fff; /* Dairevi çizgi (border) */
+  border: 9px solid #fff; /* Dairevi çizgi (border) */
   border-radius: 50%; /* Çerçeveyi dairesel yapmak için */
   border-left: transparent;
   border-bottom: transparent;
