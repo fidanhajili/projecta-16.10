@@ -640,8 +640,15 @@ bottom: 0;
 /* meqaleler */
 .meqaleler {
   height: 100vh;
-  background: url('./images/meqale/mg-bg.mp4');
   background-size: cover;
+  position: relative;
+}
+.meqaleler video {
+  height: 100vh;
+}
+.meqaleler .container {
+  position: absolute;
+  top: 0;
 }
 .mg-left .mg-left-img {
   width: 250px;
