@@ -10,6 +10,70 @@
     document.querySelector('.curtain-menu').classList.remove('aktiv')
  })
  
+
+ const right1 = document.querySelector('.right1')
+ const bizx = document.querySelector('.biz-x-mark')
+ const right2 = document.querySelector('.right2')
+ const meqsedx = document.querySelector('.meqsed-x-mark')
+ const right3 = document.querySelector('.right3')
+ const vakx = document.querySelector('.vak-x-mark')
+ const right4 = document.querySelector('.right4')
+ const partnersx = document.querySelector('.partners-x-mark')
+
+
+ right1.addEventListener('click', function () {
+ document.querySelector('.bizkimik').classList.add('aktiv')
+ })
+ bizx.addEventListener('click', function () {
+    document.querySelector('.bizkimik').classList.remove('aktiv')
+ })
+
+ right2.addEventListener('click', function () {
+    document.querySelector('.meqsedimiz').classList.add('aktiv')
+    })
+    meqsedx.addEventListener('click', function () {
+       document.querySelector('.meqsedimiz').classList.remove('aktiv')
+    })
+
+    right3.addEventListener('click', function () {
+        document.querySelector('.vakansiya').classList.add('aktiv')
+        })
+        vakx.addEventListener('click', function () {
+           document.querySelector('.vakansiya').classList.remove('aktiv')
+        })
+
+
+
+        right4.addEventListener('click', function () {
+            document.querySelector('.partners').classList.add('aktiv')
+            })
+            partnersx.addEventListener('click', function () {
+               document.querySelector('.partners').classList.remove('aktiv')
+            })
+
+
+ const counters = document.querySelectorAll(".counter");
+
+counters.forEach((counter) => {
+  counter.innerText = "0";
+
+  const updateCounter = () => {
+    const target = +counter.getAttribute("data-target");
+    const c = +counter.innerText;
+
+    const increment = target / 1000;
+    console.log(increment);
+
+    if (c < target) {
+      counter.innerText = `${Math.ceil(c + increment)}`;
+      setTimeout(updateCounter, 1);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  updateCounter();
+});
  
  let next = document.querySelector('.next')
 let prev = document.querySelector('.prev')
@@ -73,6 +137,76 @@ function moveSlider(direction) {
     }, {once: true}) 
 }
  
+const mh = document.querySelector('.mhetrafli')
+const mhX = document.querySelector('.mh-x-mark')
+
+
+mh.addEventListener('click', function () {
+  document.querySelector('.mhdetails').classList.add('aktiv')
+    })
+mhX.addEventListener('click', function () {
+    document.querySelector('.mhdetails').classList.remove('aktiv')
+      })
+
+
+      const vergi = document.querySelector('.vergietrafli')
+      const vergiX = document.querySelector('.vergi-x-mark')
+      
+      
+      vergi.addEventListener('click', function () {
+        document.querySelector('.vergidetails').classList.add('aktiv')
+          })
+      vergiX.addEventListener('click', function () {
+          document.querySelector('.vergidetails').classList.remove('aktiv')
+            })
+      
+
+            const audit = document.querySelector('.auditetrafli')
+            const auditX = document.querySelector('.audit-x-mark')
+            
+            
+            audit.addEventListener('click', function () {
+              document.querySelector('.auditdetails').classList.add('aktiv')
+                })
+            auditX.addEventListener('click', function () {
+                document.querySelector('.auditdetails').classList.remove('aktiv')
+                  })
+            
+
+                  const hr = document.querySelector('.hretrafli')
+                  const hrX = document.querySelector('.hr-x-mark')
+                  
+                  
+                 hr.addEventListener('click', function () {
+                    document.querySelector('.hrdetails').classList.add('aktiv')
+                      })
+                  hrX.addEventListener('click', function () {
+                      document.querySelector('.hrdetails').classList.remove('aktiv')
+                        })
+
+
+            const ucot = document.querySelector('.ucotetrafli')
+            const ucotX = document.querySelector('.ucot-x-mark')
+            
+            
+            ucot.addEventListener('click', function () {
+              document.querySelector('.ucotdetails').classList.add('aktiv')
+                })
+            ucotX.addEventListener('click', function () {
+                document.querySelector('.ucotdetails').classList.remove('aktiv')
+                  })
+
+
+            const huquq = document.querySelector('.huquqetrafli')
+            const huquqX = document.querySelector('.huquq-x-mark')
+            
+            
+            huquq.addEventListener('click', function () {
+              document.querySelector('.huquqdetails').classList.add('aktiv')
+                })
+            huquqX.addEventListener('click', function () {
+                document.querySelector('.huquqdetails').classList.remove('aktiv')
+                  })
 
 // telimler
 
@@ -92,5 +226,6 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             console.log('Error:', error);
         });
 });
+
 
 

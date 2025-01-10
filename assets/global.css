@@ -193,24 +193,84 @@ cursor: pointer;
 
 /* experience */
 .experience {
-  position: relative;
-  height: 40vh; 
-  width: 100%;
+  height: 20vh;
+  background-color: #002c58;
+  color: #fff;
+  font-family: "Roboto Mono", sans-serif;
+  margin: 0;
   display: flex;
   align-items: center;
-  overflow: hidden; 
+  overflow: hidden;
+}
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.background-video {
-  position: absolute;
+.counter {
+  font-size: 40px;
+}
+
+.counter-container span {
+font-size: 20px;
+color: #ddddddb0;
+font-style: italic;
+}
+
+@media (max-width: 580px) {
+  body {
+    flex-direction: column;
+  }
+}
+
+
+.mhdetails ,
+.vergidetails , .auditdetails , .hrdetails , .ucotdetails , .huquqdetails {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  background-color: #002c58;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 101%;
-  height: 100%;
-  object-fit: cover; /* Videoyu alanı tamamen kaplayacak şekilde ayarlar */
-  z-index: -1; /* Videoyu içeriklerin arkasına gönderir */
+  opacity: 0;
+  visibility: hidden; /* Başlangıçta görünmez */
+  transform: scale(0.8); /* Küçültülmüş başlangıç durumu */
+  z-index: 10000; /* Yeterince yüksek bir değer */
+  transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s ease;
+}
+.mhdetails.aktiv, 
+.vergidetails.aktiv, 
+.auditdetails.aktiv, 
+.hrdetails.aktiv, 
+.ucotdetails.aktiv, 
+.huquqdetails.aktiv {
+  opacity: 1;
+  visibility: visible; /* Görünür yapar */
+  transform: scale(1); /* Normal boyuta gelir */
 }
 
+
+.mhdetails .fa-circle-xmark , .vergidetails .fa-circle-xmark , .auditdetails .fa-circle-xmark , .hrdetails .fa-circle-xmark , .ucotdetails .fa-circle-xmark  , .huquqdetails .fa-circle-xmark {
+  font-size: 40px;
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  cursor: pointer;
+}
+.mhdetails li ,
+.vergidetails li, .auditdetails li, .hrdetails li, .ucotdetails li, .huquqdetails li {
+  font-size: 20px;
+}
+.mhdetails h3 ,
+.vergidetails h3, .auditdetails h3, .hrdetails h3, .ucotdetails h3, .huquqdetails h3 {
+font-weight: 800;
+}
 
 /* xidmetler */
 .xidmet {
@@ -324,7 +384,7 @@ cursor: pointer;
 /* nextPrevArrows Section  */
 .nextPrevArrows {
   position: absolute;
-  top: 87%;
+  top: 91%;
   right: 20%;
   z-index: 100;
   width: 300px;
@@ -397,7 +457,7 @@ cursor: pointer;
 .xidmet .slider  h1 {
   font-weight: 200;
   position: absolute;
-  bottom: 13px;
+  bottom: 30px;
   right:70px;
   color: #fff;
 }
@@ -647,13 +707,142 @@ bottom: 0;
 }
 
 /* meqaleler */
+.bizkimik {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #002c58;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden; /* Başlangıçta görünmez */
+  transform: scale(0.8); /* Küçültülmüş başlangıç durumu */
+  z-index: 10000; /* Yeterince yüksek bir değer */
+  transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s ease;
+}
+
+.bizkimik.aktiv {
+  opacity: 1;
+  visibility: visible; /* Görünür yapar */
+  transform: scale(1); /* Normal boyuta gelir */
+}
+
+.bizkimik .fa-circle-xmark {
+  font-size: 40px;
+  position: fixed;
+  top: 100px;
+  right: 100px;
+  cursor: pointer;
+}
+
+.meqsedimiz {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #002c58;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden; /* Başlangıçta görünmez */
+  transform: scale(0.8); /* Küçültülmüş başlangıç durumu */
+  z-index: 10000; /* Yeterince yüksek bir değer */
+  transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s ease;
+}
+
+.meqsedimiz.aktiv {
+  opacity: 1;
+  visibility: visible; /* Görünür yapar */
+  transform: scale(1); /* Normal boyuta gelir */
+}
+
+.meqsedimiz .fa-circle-xmark {
+  font-size: 40px;
+  position: fixed;
+  top: 100px;
+  right: 100px;
+  cursor: pointer;
+}
+
+.vakansiya {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #002c58;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden; /* Başlangıçta görünmez */
+  transform: scale(0.8); /* Küçültülmüş başlangıç durumu */
+  z-index: 10000; /* Yeterince yüksek bir değer */
+  transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s ease;
+}
+
+.vakansiya.aktiv {
+  opacity: 1;
+  visibility: visible; /* Görünür yapar */
+  transform: scale(1); /* Normal boyuta gelir */
+}
+
+.vakansiya .fa-circle-xmark {
+  font-size: 40px;
+  position: fixed;
+  top: 100px;
+  right: 100px;
+  cursor: pointer;
+}
+
+.partners {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #002c58;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden; /* Başlangıçta görünmez */
+  transform: scale(0.8); /* Küçültülmüş başlangıç durumu */
+  z-index: 10000; /* Yeterince yüksek bir değer */
+  transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s ease;
+}
+
+.partners.aktiv {
+  opacity: 1;
+  visibility: visible; /* Görünür yapar */
+  transform: scale(1); /* Normal boyuta gelir */
+}
+
+.partners .fa-circle-xmark {
+  font-size: 40px;
+  position: fixed;
+  top: 100px;
+  right: 100px;
+  cursor: pointer;
+}
+
+
 .meqaleler {
   height: 100vh;
   background-size: cover;
   position: relative;
 }
 .meqaleler video {
-  height: 100vh;
+width: 100%;
 }
 .meqaleler .container {
   position: absolute;
@@ -682,17 +871,18 @@ align-items: center;
   justify-content: center;
   align-items: center;
   padding: 22px; /* Fotoğraf ile çerçeve arasındaki mesafe */
-  border: 1px solid #fff; /* Dairevi çizgi (border) */
+  border: 3px solid #fff; /* Dairevi çizgi (border) */
   border-right: none;
   border-top: none;
   border-bottom: none;
   height: 120px;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 .mg-right .right1 {
   flex-direction: column;
   padding: 30px 200px;
-  background-color: #002c58;
+  background-color: #fff;
   margin: 30px 0;
   border-top-right-radius: 150px;
   border-bottom-right-radius: 150px;
@@ -700,71 +890,113 @@ align-items: center;
   border-bottom-left-radius: 20px;
   display: flex;
  position: relative;
- border: 1px solid #fff;
+ border: 1px solid #002c58;
+ color: #002c58;
 }
 .right1 p {
   font-size: 10px;
   white-space: nowrap;
 }
 
-.mg-right img {
+.mg-right .img1 {
   height: 120%;
   border-radius: 50%;
   position: absolute;
   top: -10px;
   left: 40px;
   object-fit: cover; /* Fotoğrafın daireyi doldurması için */
+  border: 10px solid rgb(0, 44, 88, .7); /* Transparan border */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Küçük gölge */
+}
+.mg-right .img2 {
+  height: 120%;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: 40px;
+  object-fit: cover; /* Fotoğrafın daireyi doldurması için */
+  border: 10px solid rgb(0, 44, 88, .7); /* Transparan border */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Küçük gölge */
+}
+.mg-right .img3 {
+  height: 120%;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: 40px;
+  object-fit: cover; /* Fotoğrafın daireyi doldurması için */
+  border: 10px solid rgb(0, 44, 88, .7); /* Transparan border */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Küçük gölge */
+}
+.mg-right .img4 {
+  height: 120%;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: 40px;
+  object-fit: cover; /* Fotoğrafın daireyi doldurması için */
+  border: 10px solid rgb(0, 44, 88, .7); /* Transparan border */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Küçük gölge */
 }
 .right2-container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 25px; /* Fotoğraf ile çerçeve arasındaki mesafe */
-  border: 2px solid #fff; /* Dairevi çizgi (border) */
+  border: 3px solid #fff; /* Dairevi çizgi (border) */
   border-right: transparent;
   border-top: transparent;
   border-bottom: transparent;
   height: 120px;
   margin-bottom: 30px;
   margin-left: 90px;
+  cursor: pointer;
 }
 .right2 p {
   font-size: 10px;
   white-space: nowrap;
 }
 .mg-right .right2 {
+  flex-direction: column;
   padding: 30px 200px;
-  background-color: #002c58;
+  background-color: #fff;
   margin: 30px 0;
   border-top-right-radius: 150px;
   border-bottom-right-radius: 150px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  border: 1px solid #fff;
+  display: flex;
+ position: relative;
+ border: 1px solid #002c58;
+ color: #002c58;
 }
 .right3-container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 25px; /* Fotoğraf ile çerçeve arasındaki mesafe */
-  border: 2px solid #fff; /* Dairevi çizgi (border) */
+  border: 3px solid #fff; /* Dairevi çizgi (border) */
   border-right: transparent;
   border-top: transparent;
   border-bottom: transparent;
   height: 120px;
   margin-bottom: 30px;
   margin-left: 90px;
+  cursor: pointer;
 }
 .mg-right .right3 {
+  flex-direction: column;
   padding: 30px 200px;
-  background-color: #002c58;
+  background-color: #fff;
   margin: 30px 0;
   border-top-right-radius: 150px;
   border-bottom-right-radius: 150px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  border: 1px solid #fff;
-  
+  display: flex;
+ position: relative;
+ border: 1px solid #002c58;
+ color: #002c58;
 }
 .right3 p {
   font-size: 10px;
@@ -775,22 +1007,27 @@ align-items: center;
   justify-content: center;
   align-items: center;
   padding: 25px; /* Fotoğraf ile çerçeve arasındaki mesafe */
-  border: 2px solid #fff; /* Dairevi çizgi (border) */
+  border: 3px solid #fff; /* Dairevi çizgi (border) */
   border-right: transparent;
   border-top: transparent;
   border-bottom: transparent;
   height: 120px;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 .mg-right .right4 {
+  flex-direction: column;
   padding: 30px 200px;
-  background-color: #002c58;
+  background-color: #fff;
   margin: 30px 0;
   border-top-right-radius: 150px;
   border-bottom-right-radius: 150px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  border: 1px solid #fff;
+  display: flex;
+ position: relative;
+ border: 1px solid #002c58;
+ color: #002c58;
 }
 .right4 p {
   font-size: 10px;
@@ -813,7 +1050,7 @@ align-items: center;
   justify-content: center;
   align-items: center;
   padding: 20px; /* Fotoğraf ile çerçeve arasındaki mesafe */
-  border: 9px solid #fff; /* Dairevi çizgi (border) */
+  border: 25px solid #fff; /* Dairevi çizgi (border) */
   border-radius: 50%; /* Çerçeveyi dairesel yapmak için */
   border-left: transparent;
   border-bottom: transparent;
