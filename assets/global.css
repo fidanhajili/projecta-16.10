@@ -197,10 +197,8 @@ cursor: pointer;
   background-color: #002c58;
   color: #fff;
   font-family: "Roboto Mono", sans-serif;
-  margin: 0;
   display: flex;
   align-items: center;
-  overflow: hidden;
 }
 .counter-container {
   display: flex;
@@ -219,25 +217,20 @@ color: #ddddddb0;
 font-style: italic;
 }
 
-@media (max-width: 580px) {
-  body {
-    flex-direction: column;
-  }
-}
 
 
 .mhdetails ,
 .vergidetails , .auditdetails , .hrdetails , .ucotdetails , .huquqdetails {
-  width: 100%;
-  height: 100vh;
+  width: 80%;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #fff;
   background-color: #002c58;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 10%;
+  left: 10%;
   opacity: 0;
   visibility: hidden; /* Başlangıçta görünmez */
   transform: scale(0.8); /* Küçültülmüş başlangıç durumu */
@@ -708,16 +701,16 @@ bottom: 0;
 
 /* meqaleler */
 .bizkimik {
-  width: 100%;
-  height: 100vh;
+  width: 80%;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
   background-color: #002c58;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 10%;
+  left: 10%;
   opacity: 0;
   visibility: hidden; /* Başlangıçta görünmez */
   transform: scale(0.8); /* Küçültülmüş başlangıç durumu */
@@ -734,22 +727,152 @@ bottom: 0;
 .bizkimik .fa-circle-xmark {
   font-size: 40px;
   position: fixed;
-  top: 100px;
-  right: 100px;
+  top: 30px;
+  right: 30px;
   cursor: pointer;
+}
+.bizkimik .h6b {
+  border: 1px solid #fff;
+  background-color: #ddd;
+  color: #021528;
+  border-radius: 20px;
+  padding: 20px;
+}
+.bizkimik .card {
+  max-width: 350px;
+  min-width: 350px;
+  height: 11vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: row;
+}
+.bizkimik .b-left .card {
+  border-radius: 40px 3px 40px 3px;
+}
+.bizkimik .b-right .card {
+  border-radius: 3px 40px 3px 40px;
+}
+.bizkimik .b-right .card h1 {
+  border-radius: 3px 45px 3px 45px;
+  width: 110px;
+  height: 96%;
+  position: absolute;
+  right: 1%;
+  top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 100;
+  color: #fff;
+  font-size: 22px;
+}
+.bizkimik .b-left .card h1 {
+  border-radius: 45px 3px 45px 3px;
+  width: 110px;
+  height: 96%;
+  position: absolute;
+  left: 1%;
+  top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 100;
+  color: #fff;
+  font-size: 22px;
+}
+.bizkimik .cardb1 h1 {
+ background: linear-gradient(to right,#9178bf, #dc58c8);
+}
+.bizkimik .cardb2 h1 {
+  background: linear-gradient(to right,#6e51a4, #823dbb);
+ }
+ .bizkimik .cardb3 h1 {
+  background: linear-gradient(to right,#5846b5, #463587);
+ }
+ .bizkimik .cardb4 h1 {
+  background: linear-gradient(to right,#597ecf, #6b778a);
+ }
+ .bizkimik .cardb5 h1 {
+  background: linear-gradient(to right,#479cb1, #4ac3e2);
+ }
+ .bizkimik .cardb6 h1 {
+  background: linear-gradient(to right,#b14765, #e53544);
+ }
+ .bizkimik .cardb7 h1 {
+  background: linear-gradient(to right,#da8f27, #e87612);
+ }
+ .bizkimik .cardb8 h1 {
+  background: linear-gradient(to right,#d4cb25, #dfcf29);
+ }
+ .bizkimik .cardb9 h1 {
+  background: linear-gradient(to right,#79e784, #4db856);
+ }
+ .bizkimik .cardb10 h1 {
+  background: linear-gradient(to right,#479cb1, #34884d);
+ }
+.bizkimik .cardb1 {
+  top: 10%;
+  left: 150px;
+  position: absolute;
+}
+.bizkimik .cardb5 {
+  bottom: 10%;
+  left: 150px;
+  position: absolute;
+}
+.bizkimik .cardb2 {
+  top: 27%;
+  left: 70px;
+  position: absolute;
+}
+.bizkimik .cardb4 {
+  bottom: 27%;
+  left: 70px;
+  position: absolute;
+}
+.bizkimik .cardb3 {
+  top: 43%;
+  left: 20px;
+  position: absolute;
+}
+.bizkimik .cardb6 {
+  top: 10%;
+  right: 150px;
+  position: absolute;
+}
+.bizkimik .cardb10 {
+  bottom: 10%;
+  right: 150px;
+  position: absolute;
+}
+.bizkimik .cardb7 {
+  top: 27%;
+  right: 70px;
+  position: absolute;
+}
+.bizkimik .cardb9 {
+  bottom: 27%;
+  right: 70px;
+  position: absolute;
+}
+.bizkimik .cardb8 {
+  top: 43%;
+  right: 20px;
+  position: absolute;
 }
 
 .meqsedimiz {
-  width: 100%;
-  height: 100vh;
+  width: 80%;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
   background-color: #002c58;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 10%;
+  left: 10%;
   opacity: 0;
   visibility: hidden; /* Başlangıçta görünmez */
   transform: scale(0.8); /* Küçültülmüş başlangıç durumu */
@@ -766,22 +889,22 @@ bottom: 0;
 .meqsedimiz .fa-circle-xmark {
   font-size: 40px;
   position: fixed;
-  top: 100px;
-  right: 100px;
+  top: 30px;
+  right: 30px;
   cursor: pointer;
 }
 
 .vakansiya {
-  width: 100%;
-  height: 100vh;
+  width: 80%;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
   background-color: #002c58;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 10%;
+  left: 10%;
   opacity: 0;
   visibility: hidden; /* Başlangıçta görünmez */
   transform: scale(0.8); /* Küçültülmüş başlangıç durumu */
@@ -798,22 +921,23 @@ bottom: 0;
 .vakansiya .fa-circle-xmark {
   font-size: 40px;
   position: fixed;
-  top: 100px;
-  right: 100px;
+  top: 30px;
+  right: 30px;
   cursor: pointer;
 }
 
 .partners {
-  width: 100%;
-  height: 100vh;
+  width: 80%;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   color: #fff;
   background-color: #002c58;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 10%;
+  left: 10%;
   opacity: 0;
   visibility: hidden; /* Başlangıçta görünmez */
   transform: scale(0.8); /* Küçültülmüş başlangıç durumu */
@@ -830,26 +954,43 @@ bottom: 0;
 .partners .fa-circle-xmark {
   font-size: 40px;
   position: fixed;
-  top: 100px;
-  right: 100px;
+  top: 30px;
+  right: 30px;
   cursor: pointer;
+}
+.swiper {
+  width: 100%;
+  height: 30vh;
+}
+
+.swiper-slide {
+  background-color: #002c58;
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide img {
+  width: 100%;
 }
 
 
 .meqaleler {
+  background-color: #021528;
   height: 100vh;
   background-size: cover;
   position: relative;
 }
 .meqaleler video {
-width: 100%;
+height: 100vh;
 }
 .meqaleler .container {
   position: absolute;
   top: 0;
 }
 .mg-left .mg-left-img {
-  width: 250px;
+  width: 200px;
   border-radius: 50%;
 }
 .mg-left {
@@ -875,13 +1016,13 @@ align-items: center;
   border-right: none;
   border-top: none;
   border-bottom: none;
-  height: 120px;
+  height: 80px;
   margin-bottom: 30px;
   cursor: pointer;
 }
 .mg-right .right1 {
   flex-direction: column;
-  padding: 30px 200px;
+  padding: 10px 200px;
   background-color: #fff;
   margin: 30px 0;
   border-top-right-radius: 150px;
@@ -947,7 +1088,7 @@ align-items: center;
   border-right: transparent;
   border-top: transparent;
   border-bottom: transparent;
-  height: 120px;
+  height: 80px;
   margin-bottom: 30px;
   margin-left: 90px;
   cursor: pointer;
@@ -958,7 +1099,7 @@ align-items: center;
 }
 .mg-right .right2 {
   flex-direction: column;
-  padding: 30px 200px;
+  padding: 10px 200px;
   background-color: #fff;
   margin: 30px 0;
   border-top-right-radius: 150px;
@@ -979,14 +1120,14 @@ align-items: center;
   border-right: transparent;
   border-top: transparent;
   border-bottom: transparent;
-  height: 120px;
+  height: 80px;
   margin-bottom: 30px;
   margin-left: 90px;
   cursor: pointer;
 }
 .mg-right .right3 {
   flex-direction: column;
-  padding: 30px 200px;
+  padding: 10px 200px;
   background-color: #fff;
   margin: 30px 0;
   border-top-right-radius: 150px;
@@ -1011,13 +1152,13 @@ align-items: center;
   border-right: transparent;
   border-top: transparent;
   border-bottom: transparent;
-  height: 120px;
+  height: 80px;
   margin-bottom: 30px;
   cursor: pointer;
 }
 .mg-right .right4 {
   flex-direction: column;
-  padding: 30px 200px;
+  padding: 10px 200px;
   background-color: #fff;
   margin: 30px 0;
   border-top-right-radius: 150px;
