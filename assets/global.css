@@ -653,29 +653,29 @@ border-radius: 3px;
   color: #000;
   font-size: 13px;
 }
-.card:hover {
+.telimler .card:hover {
   cursor: pointer;
   width: 2000px !important;
   transition: .8s ease;
 }
-.card:hover .intro {
+.telimler .card:hover .intro {
   height: 500px;
 bottom: 0;
-  background: url('./images/telimler/telimbg3.jpeg');
+  background: url('./images/telimler/fon.jpeg');
   background-position: center center;
   background-size: cover;
 }
-.card:hover p {
+.telimler .card:hover p {
   opacity: 1;
   visibility: visible;
   display: block;
   text-align: justify;
   padding: 0 20px;
 }
-.card:hover img {
+.telimler .card:hover img {
   transform: scale(1.1) ;
 }
-.card:hover h1 {
+.telimler .card:hover h1 {
   color: #000;
   font-weight: 600;
 }
@@ -924,6 +924,42 @@ bottom: 0;
   top: 30px;
   right: 30px;
   cursor: pointer;
+}
+.vakansiya .scrollable-box {
+  width: 100%; /* Kutunun genişliği */
+  height: 80vh; /* Kutunun yüksekliği */
+
+  padding: 10px; /* İç boşluk */
+  overflow-y: scroll; /* Sadece dikey kaydırma çubuğu */
+  overflow-x: hidden; /* Yatay kaydırmayı devre dışı bırak */
+  box-sizing: border-box; /* İçeriğin taşmamasını sağlar */
+}
+
+/* Kaydırma çubuğunu özelleştirme (isteğe bağlı) */
+.vakansiya .scrollable-box::-webkit-scrollbar {
+  width: 15px; /* Kaydırma çubuğu genişliği */
+}
+
+.vakansiya .scrollable-box::-webkit-scrollbar-thumb {
+  background: #ddd; /* Kaydırma çubuğu rengi */
+  border-radius: 10px; /* Yuvarlak kenarlar */
+}
+
+.vakansiya .scrollable-box::-webkit-scrollbar-thumb:hover {
+  background: #dddddda3; /* Üzerine gelince renk değişir */
+}
+.vakansiya h5 {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 22px;
+}
+.vakansiya ul li {
+  font-size: 18px;
+}
+.vakansiya a {
+  font-style: italic;
+  text-decoration: none;
+  color: #ddd;
 }
 
 .partners {
@@ -1202,7 +1238,21 @@ align-items: center;
 .blog {
   height: 100vh;
 }
+.blog .row {
+  display: flex;
+  gap: 15px; /* Kartlar arasındaki boşluk */
+  flex-wrap: nowrap; /* İçeriğin sarılmasına izin ver */
+}
 
+.blog h1 {
+  border: 1px solid #000;
+}
+.blog .blog-cards .card {
+  border: 1px solid #000;
+  background-color: #ddd;
+  height: 75vh;
+  border-radius: 30px;
+}
 /* footer */
 .footer {
   height: 25vh;
