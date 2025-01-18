@@ -236,6 +236,7 @@ font-style: italic;
   transform: scale(0.8); /* Küçültülmüş başlangıç durumu */
   z-index: 10000; /* Yeterince yüksek bir değer */
   transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s ease;
+  border-radius: 10px;
 }
 .mhdetails.aktiv, 
 .vergidetails.aktiv, 
@@ -264,6 +265,94 @@ font-style: italic;
 .vergidetails h3, .auditdetails h3, .hrdetails h3, .ucotdetails h3, .huquqdetails h3 {
 font-weight: 800;
 }
+.mhdetails .mh-cards1, .mhdetails .mh-cards2 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.mhdetails .mh-cards2 {
+  margin-top: -40px;
+}
+.mhdetails .mh-cards1 .card {
+  width: 200px;
+  height: 220px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  color: #fff;
+}
+.mhdetails .mh-cards2 .card {
+  width: 200px;
+  height: 220px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  color: #fff;
+}
+.mhdetails .mh-cards1 h6 {
+  font-size: 14px;
+}
+.mhdetails .mh-cards1 .mh-card1 {
+  background: linear-gradient(135deg, #fff, #bbcb119c, #c2bc16b4);
+}
+.mhdetails .mh-cards1 .mh-card2 h6 {
+  color: #021528;
+}
+.mhdetails .mh-cards1 .mh-card3 {
+  background: linear-gradient(135deg, #cb11a99c, #e108a0e9);
+}
+.mhdetails .mh-cards1 .mh-card4 {
+  background: linear-gradient(135deg, #fff, #a250d98f, #b849e4b4);
+}
+.mhdetails .mh-cards1 .mh-card5 {
+  background: linear-gradient(135deg, #26c7239c, #16c247b4);
+}
+.mhdetails .mh-cards2 .mh-card6 {
+  background: linear-gradient(135deg,#fff, #ec9006, #e27602);
+}
+.mhdetails .mh-cards2 .mh-card7 {
+  background: linear-gradient(135deg,#fff, #e74504, #ff5100);
+}
+.mhdetails .mh-cards2 .mh-card8 {
+background-color: #fff;
+}
+.mhdetails .mh-cards2 .mh-card8 {
+  color: #021528;
+}
+.mhdetails .mh-cards2 .mh-card9 {
+  background: linear-gradient(135deg, #fff, #40e0d0, #05808c, #000);
+}
+.vergi-cards1 , .vergi-cards2 {
+  display: flex;
+  gap: 15px;
+}
+.vergi-cards1 {
+  padding-left: 160px;
+}
+.vergi-cards2 {
+  padding-left: 282px;
+  margin-top: -50px;
+}
+.vergi-cards1 .card, .vergi-cards2 .card {
+  width: 230px;
+  height: 260px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
 
 /* xidmetler */
 .xidmet {
@@ -716,6 +805,7 @@ bottom: 0;
   transform: scale(0.8); /* Küçültülmüş başlangıç durumu */
   z-index: 10000; /* Yeterince yüksek bir değer */
   transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s ease;
+  border-radius: 10px;
 }
 
 .bizkimik.aktiv {
@@ -878,6 +968,8 @@ bottom: 0;
   transform: scale(0.8); /* Küçültülmüş başlangıç durumu */
   z-index: 10000; /* Yeterince yüksek bir değer */
   transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s ease;
+  border-radius: 10px;
+
 }
 
 .meqsedimiz.aktiv {
@@ -910,6 +1002,8 @@ bottom: 0;
   transform: scale(0.8); /* Küçültülmüş başlangıç durumu */
   z-index: 10000; /* Yeterince yüksek bir değer */
   transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s ease;
+  border-radius: 10px;
+
 }
 
 .vakansiya.aktiv {
@@ -979,6 +1073,8 @@ bottom: 0;
   transform: scale(0.8); /* Küçültülmüş başlangıç durumu */
   z-index: 10000; /* Yeterince yüksek bir değer */
   transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s ease;
+  border-radius: 10px;
+
 }
 
 .partners.aktiv {
@@ -1238,9 +1334,11 @@ align-items: center;
 .blog {
   height: 100vh;
 }
-.blog .row {
+.blog .blog-cards .row {
   display: flex;
-  gap: 15px; /* Kartlar arasındaki boşluk */
+  justify-content: center;
+  align-items: center;
+  gap: 55px; /* Kartlar arasındaki boşluk */
   flex-wrap: nowrap; /* İçeriğin sarılmasına izin ver */
 }
 
@@ -1250,8 +1348,9 @@ align-items: center;
 .blog .blog-cards .card {
   border: 1px solid #000;
   background-color: #ddd;
-  height: 75vh;
+  height: 70vh;
   border-radius: 30px;
+width: 18vw;
 }
 /* footer */
 .footer {
