@@ -20,6 +20,7 @@
  const partnersx = document.querySelector('.partners-x-mark')
 
 
+ 
  right1.addEventListener('click', function () {
  document.querySelector('.bizkimik').classList.add('aktiv')
  })
@@ -33,6 +34,7 @@
     meqsedx.addEventListener('click', function () {
        document.querySelector('.meqsedimiz').classList.remove('aktiv')
     })
+
 
     right3.addEventListener('click', function () {
         document.querySelector('.vakansiya').classList.add('aktiv')
@@ -50,11 +52,14 @@
                document.querySelector('.partners').classList.remove('aktiv')
             })
 
+
+
+            
             const swiper = new Swiper(".mySwiper", {
                 slidesPerView: "auto",
                 spaceBetween: 30,
                 autoplay: {
-                    delay: 2500,
+                    delay: 1000,
                     disableOnInteraction: false,
                   },
                 breakpoints: {
@@ -68,33 +73,72 @@
                     },
                     1024: {
                       slidesPerView: 8,
-                      spaceBetween: 50,
+                      spaceBetween: 30,
                     },
                   },
               });
 
- const counters = document.querySelectorAll(".counter");
+              const headers = document.querySelectorAll(".accordion-header");
 
-counters.forEach((counter) => {
-  counter.innerText = "0";
+              headers.forEach((header) => {
+                header.addEventListener("click", () => {
+                  // Tüm içerikleri kapat
+                  headers.forEach((h) => {
+                    if (h !== header) {
+                      h.classList.remove("active");
+                      h.nextElementSibling.style.display = "none";
+                    }
+                  });
+          
+                  // Tıklanan başlığı aç/kapat
+                  const content = header.nextElementSibling;
+                  const isActive = header.classList.contains("active");
+          
+                  if (isActive) {
+                    header.classList.remove("active");
+                    content.style.display = "none";
+                  } else {
+                    header.classList.add("active");
+                    content.style.display = "block";
+                  }
+                });
+              });
+              
+              const counters = document.querySelectorAll(".counter");
 
-  const updateCounter = () => {
-    const target = +counter.getAttribute("data-target");
-    const c = +counter.innerText;
-
-    const increment = target / 1000;
-    console.log(increment);
-
-    if (c < target) {
-      counter.innerText = `${Math.ceil(c + increment)}`;
-      setTimeout(updateCounter, 1);
-    } else {
-      counter.innerText = target;
-    }
-  };
-
-  updateCounter();
-});
+              function startCounters() {
+                counters.forEach((counter) => {
+                  counter.innerText = "0";
+          
+                  const updateCounter = () => {
+                    const target = +counter.getAttribute("data-target");
+                    const c = +counter.innerText;
+          
+                    const increment = target / 1000;
+          
+                    if (c < target) {
+                      counter.innerText = `${Math.ceil(c + increment)}`;
+                      setTimeout(updateCounter, 1);
+                    } else {
+                      counter.innerText = target;
+                    }
+                  };
+          
+                  updateCounter();
+                });
+              }
+          
+              // İlk sayfa yüklenmesinde çalıştır
+              startCounters();
+          
+              // Scroll olayı için yeniden başlat
+              let isScrolling;
+              window.onscroll = () => {
+                clearTimeout(isScrolling); // Daha önceki kaydırma olayını temizle
+                isScrolling = setTimeout(() => {
+                  startCounters(); // Counter'ı yeniden başlat
+                }, 100); // Scroll durduktan 100ms sonra tetikle
+              };
  
  let next = document.querySelector('.next')
 let prev = document.querySelector('.prev')
