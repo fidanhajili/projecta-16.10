@@ -248,6 +248,24 @@ font-style: italic;
   visibility: visible; /* Görünür yapar */
   transform: scale(1); /* Normal boyuta gelir */
 }
+.mhdetails .card, 
+.vergidetails .card, 
+.auditdetails .card, 
+.hrdetails .card, 
+.ucotdetails .card, 
+.huquqdetails .card {
+  transition: transform 0.3s ease; /* Yumuşak geçiş */
+}
+
+.mhdetails .card:hover, 
+.vergidetails .card:hover, 
+.auditdetails .card:hover, 
+.hrdetails .card:hover, 
+.ucotdetails .card:hover, 
+.huquqdetails .card:hover {
+  transform: scale(1.1); /* Hover durumunda öğeyi %10 büyütme */
+}
+
 
 .mhdetails h3, .vergidetails h3 , .auditdetails h3 , .hrdetails h3 , .ucotdetails h3 , .huquqdetails h3 {
 border-bottom: 1px solid #ffffff59;
@@ -287,7 +305,7 @@ font-weight: 800;
   position: relative;
   transition: transform 0.3s;
   color: #fff;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .mhdetails .mh-cards2 .card {
   width: 200px;
@@ -926,7 +944,7 @@ background-size: cover;
   margin: 25px 10px;
   box-shadow: 10px 10px 20px black;
   overflow: hidden;
-  border: 2px solid #333435;
+  border: 1px solid #333435;
   border-radius: 20px;
 }
 .telimler .card:first-child img {
@@ -1055,13 +1073,32 @@ bottom: 0;
   right: 30px;
   cursor: pointer;
 }
-.bizkimik .h6b {
-  border: 1px solid #fff;
-  background-color: #ddd;
+.bizkimik .circle .h6b {
+  border: transparent;
   color: #021528;
-  border-radius: 20px;
+display: flex;
+color: #002c58;
+font-size: 11px;
+padding: 30px;
+position: absolute;
+top: 15%;
+}
+.bizkimik .circle {
   border-radius: 50%;
-padding: 50px;
+  background-color: #83baf1; /* Beyaz arka plan */
+box-shadow: 
+  inset -10px -10px 20px rgba(255, 255, 255, 0.9), /* Üst kenara parlaklık */
+  inset 10px 10px 20px rgba(0, 0, 0, 0.3),        /* Alt kenara koyu gölge */
+  inset 4px 4px 10px rgba(0, 0, 0, 0.2),          /* İçte ekstra gölge */
+  -8px -8px 15px rgba(255, 255, 255, 0.7),        /* Dış üst parlaklık */
+  8px 8px 15px rgba(0, 0, 0, 0.25);     
+width: 330px;
+height: 330px;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+margin-left: 22px;
 }
 .bizkimik .card {
   max-width: 350px;
@@ -1092,9 +1129,28 @@ padding: 50px;
   color: #fff;
   font-size: 22px;
 }
-.bizkimik .b-right .card h1 span {
-  transform: rotate(45deg); /* 45 derece eğim */
 
+.bizkimik .card .top-left {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  font-size: 35px; /* Yazı ölçüsü */
+  transform: scale(1, 1);
+}
+
+.bizkimik .card .center-slash {
+  font-size: 24px;
+  font-weight: bold;
+  transform: rotate(15deg) scale(1.2, 1.5); /* Döndər və uzat */
+  transform-origin: center;
+}
+
+.bizkimik .card .bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  font-size: 35px;
+  transform: scale(1, 1);
 }
 .bizkimik .b-left .card h1 {
   border-radius: 40px 3px 40px 3px;
@@ -1356,7 +1412,6 @@ font-size: 18px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #fff;
   background-color: #649ad1;
   position: fixed;
   top: 10%;
@@ -1367,29 +1422,66 @@ font-size: 18px;
   z-index: 10000; /* Yeterince yüksek bir değer */
   transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s ease;
   border-radius: 10px;
+  color: #ddd;
 }
-
+.partners .partners-card {
+ position: absolute;
+ right: 0;
+ top: 20px;
+ width: 80%;
+ border-top-left-radius: 140px;
+ border-bottom-left-radius: 140px;
+ background-color: #739cc6;
+ box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+ height: 40vh;
+}
+.partners .partners-card .p-card {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  border-top-left-radius: 140px;
+  border-bottom-left-radius: 140px;
+  height: 28vh;
+  width: 92%;
+  background-color: #567da4;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
 .partners.aktiv {
   opacity: 1;
   visibility: visible; /* Görünür yapar */
   transform: scale(1); /* Normal boyuta gelir */
 }
-.partners h4 {
-  background-color: #ffffff63;
-  border-radius: 20px;
-  color: #021528;
-  width: 100%;
+.p-right {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.p-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.p-left h3 {
+  margin-left: 20px;
+}
+.p-right p {
+font-size: 13px;
+padding: 20px;
+border-left: 1px solid #fff;
 }
 .partners .fa-circle-xmark {
   font-size: 40px;
   position: fixed;
-  top: 30px;
-  right: 30px;
+  top: 10px;
+  right: 10px;
   cursor: pointer;
+  z-index: 9999999;
 }
 .swiper {
   width: 100%;
   height: 20vh;
+  position: absolute;
+  bottom: 20px;
 }
 
 .swiper-slide {
