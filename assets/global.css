@@ -1401,8 +1401,31 @@ padding: 0 30px;
 
 .about {
   height: 100vh;
-background: url('./images/about/about-bg.jpg');
+position: relative;
+z-index: 1;
 }
+.about .video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* İçeriğin ön planda kalmasını sağlar */
+}
+
+.about .video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover; /* Videonun ekranı tamamen kaplamasını sağlar */
+}
+
 .about .hexagon-cards .gfc-h1 {
   position: absolute;
   font-size: 35px;
@@ -1571,6 +1594,7 @@ border-radius: 20px;
 
 .blog {
   height: 100vh;
+  background: url('./images/telimler/about-bg.jpg');
 }
 .blog .blog-cards .row {
   display: flex;
