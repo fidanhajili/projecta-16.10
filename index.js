@@ -10,73 +10,73 @@
     document.querySelector('.curtain-menu').classList.remove('aktiv')
  })
  
- const right1 = document.querySelector('.right1')
- const bizx = document.querySelector('.biz-x-mark')
- const right2 = document.querySelector('.right2')
- const meqsedx = document.querySelector('.meqsed-x-mark')
- const right3 = document.querySelector('.right3')
- const vakx = document.querySelector('.vak-x-mark')
- const right4 = document.querySelector('.right4')
- const partnersx = document.querySelector('.partners-x-mark')
+//  const right1 = document.querySelector('.right1')
+//  const bizx = document.querySelector('.biz-x-mark')
+//  const right2 = document.querySelector('.right2')
+//  const meqsedx = document.querySelector('.meqsed-x-mark')
+//  const right3 = document.querySelector('.right3')
+//  const vakx = document.querySelector('.vak-x-mark')
+//  const right4 = document.querySelector('.right4')
+//  const partnersx = document.querySelector('.partners-x-mark')
 
 
  
- right1.addEventListener('click', function () {
- document.querySelector('.bizkimik').classList.add('aktiv')
- })
- bizx.addEventListener('click', function () {
-    document.querySelector('.bizkimik').classList.remove('aktiv')
- })
+//  right1.addEventListener('click', function () {
+//  document.querySelector('.bizkimik').classList.add('aktiv')
+//  })
+//  bizx.addEventListener('click', function () {
+//     document.querySelector('.bizkimik').classList.remove('aktiv')
+//  })
 
- right2.addEventListener('click', function () {
-    document.querySelector('.meqsedimiz').classList.add('aktiv')
-    })
-    meqsedx.addEventListener('click', function () {
-       document.querySelector('.meqsedimiz').classList.remove('aktiv')
-    })
-
-
-    right3.addEventListener('click', function () {
-        document.querySelector('.vakansiya').classList.add('aktiv')
-        })
-        vakx.addEventListener('click', function () {
-           document.querySelector('.vakansiya').classList.remove('aktiv')
-        })
+//  right2.addEventListener('click', function () {
+//     document.querySelector('.meqsedimiz').classList.add('aktiv')
+//     })
+//     meqsedx.addEventListener('click', function () {
+//        document.querySelector('.meqsedimiz').classList.remove('aktiv')
+//     })
 
 
+//     right3.addEventListener('click', function () {
+//         document.querySelector('.vakansiya').classList.add('aktiv')
+//         })
+//         vakx.addEventListener('click', function () {
+//            document.querySelector('.vakansiya').classList.remove('aktiv')
+//         })
 
-        right4.addEventListener('click', function () {
-            document.querySelector('.partners').classList.add('aktiv')
-            })
-            partnersx.addEventListener('click', function () {
-               document.querySelector('.partners').classList.remove('aktiv')
-            })
+
+
+//         right4.addEventListener('click', function () {
+//             document.querySelector('.partners').classList.add('aktiv')
+//             })
+//             partnersx.addEventListener('click', function () {
+//                document.querySelector('.partners').classList.remove('aktiv')
+//             })
 
 
 
             
-            const swiper = new Swiper(".mySwiper", {
-                slidesPerView: "auto",
-                spaceBetween: 30,
-                autoplay: {
-                    delay: 1000,
-                    disableOnInteraction: false,
-                  },
-                breakpoints: {
-                    320: {
-                      slidesPerView: 2,
-                      spaceBetween: 20,
-                    },
-                    768: {
-                      slidesPerView: 4,
-                      spaceBetween: 40,
-                    },
-                    1024: {
-                      slidesPerView: 8,
-                      spaceBetween: 30,
-                    },
-                  },
-              });
+//             const swiper = new Swiper(".mySwiper", {
+//                 slidesPerView: "auto",
+//                 spaceBetween: 30,
+//                 autoplay: {
+//                     delay: 1000,
+//                     disableOnInteraction: false,
+//                   },
+//                 breakpoints: {
+//                     320: {
+//                       slidesPerView: 2,
+//                       spaceBetween: 20,
+//                     },
+//                     768: {
+//                       slidesPerView: 4,
+//                       spaceBetween: 40,
+//                     },
+//                     1024: {
+//                       slidesPerView: 8,
+//                       spaceBetween: 30,
+//                     },
+//                   },
+//               });
 
               const headers = document.querySelectorAll(".accordion-header");
 

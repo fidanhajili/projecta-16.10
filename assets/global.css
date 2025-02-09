@@ -186,10 +186,6 @@ cursor: pointer;
   cursor: pointer;
 }
 
-/* about */
-.about {
-  height: 100vh;
-}
 
 /* experience */
 .experience {
@@ -272,8 +268,8 @@ border-bottom: 1px solid #ffffff59;
 height: 10px;
 width: 100%;
 }
-.mhdetails .fa-circle-xmark , .vergidetails .fa-circle-xmark , .auditdetails .fa-circle-xmark , .hrdetails .fa-circle-xmark , .ucotdetails .fa-circle-xmark  , .huquqdetails .fa-circle-xmark {
-  font-size: 40px;
+.mhdetails .fa-xmark , .vergidetails .fa-xmark , .auditdetails .fa-xmark , .hrdetails .fa-xmark , .ucotdetails .fa-xmark  , .huquqdetails .fa-xmark {
+  font-size: 30px;
   position: fixed;
   top: 40px;
   right: 40px;
@@ -922,104 +918,6 @@ border: none;
 background-color: none;
 }
 
-
-/* telimler */
-.telimler {
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  align-items: center;
-background: url('/assets/images/telimler/telimlerfon2.jpeg');
-background-size: cover;
-}
-.telimler .container {
-  display: flex;
-  border: 1px solid #002c58;
-  background-color: #ffffffdb;
-  border-radius: 10px;
-}
-.telimler .card {
-  width: 600px;
-  height: 500px;
-  margin: 25px 10px;
-  box-shadow: 10px 10px 20px black;
-  overflow: hidden;
-  border: 1px solid #333435;
-  border-radius: 20px;
-}
-.telimler .card:first-child img {
-object-position: -12px center;
-}
-.telimler .card:nth-child(2) img {
-margin-bottom: 70px;
-}
-.telimler img {
-height: 100%;
-width: 100%;
-border-radius: 3px;
-}
-.telimler .intro {
-  height: 70px;
-  width: 100%;
-  padding: 6px;
-  box-sizing: border-box;
-  position: absolute;
-  bottom: 0;
-  background: #002c58;
-  color: #fff;
-  transition: .7s;
-}
-.telimler .intro h1 {
-  margin: 10px;
-  font-size: 25px;
-  text-transform: capitalize;
-  overflow: hidden; 
-  white-space: nowrap; 
-  text-overflow: clip;
-}
-.telimler .intro p {
-  font-size: 15px;
-  margin: 20px;
-  visibility: hidden;
-  opacity: 0;
-  transition: .2s;
-  color: #000;
-}
-.telimler .intro ul li {
-  font-weight: 200;
-  color: #000;
-  font-size: 13px;
-}
-.telimler .card:hover {
-  cursor: pointer;
-  width: 2000px !important;
-  transition: .8s ease;
-}
-.telimler .card:hover .intro {
-  height: 500px;
-bottom: 0;
-  background: url('./images/telimler/fon.jpeg');
-  background-position: center center;
-  background-size: cover;
-}
-.telimler .card:hover p {
-  opacity: 1;
-  visibility: visible;
-  display: block;
-  text-align: justify;
-  padding: 0 20px;
-}
-.telimler .card:hover img {
-  transform: scale(1.1) ;
-}
-.telimler .card:hover h1 {
-  color: #000;
-  font-weight: 600;
-}
-.card img {
-  object-fit: cover;
-}
-
 /* contact-menu */
 
 .contact-menu {
@@ -1036,7 +934,7 @@ bottom: 0;
   color: #002c58;
 }
 
-/* meqaleler */
+/* about-mobile */
 .bizkimik {
   width: 80%;
   height: 80vh;
@@ -1055,10 +953,27 @@ bottom: 0;
   transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s ease;
   border-radius: 10px;
 }
-.bizkimik h6 {
-  position: absolute;
-  top: 30%;
-  left: 50px;
+.bizkimik .b-right h6 {
+  width: 90%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin: 0;
+  color: #fff;
+}
+.bizkimik .b-left h6 {
+  width: 90%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin: 0;
+  color: #fff;
 }
 .bizkimik.aktiv {
   opacity: 1;
@@ -1066,8 +981,8 @@ bottom: 0;
   transform: scale(1); /* Normal boyuta gelir */
 }
 
-.bizkimik .fa-circle-xmark {
-  font-size: 40px;
+.bizkimik .fa-xmark {
+  font-size: 30px;
   position: fixed;
   top: 30px;
   right: 30px;
@@ -1076,12 +991,13 @@ bottom: 0;
 .bizkimik .circle .h6b {
   border: transparent;
   color: #021528;
-display: flex;
 color: #002c58;
-font-size: 11px;
-padding: 30px;
+font-size: 12px;
+padding: 25px 10px 10px 10px;
 position: absolute;
-top: 15%;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 .bizkimik .circle {
   border-radius: 50%;
@@ -1106,7 +1022,7 @@ margin-left: 22px;
   height: 11vh;
   display: flex;
   justify-content: center;
-  align-self: center;
+  align-items: center;
   flex-direction: row;
 }
 .bizkimik .b-left .card {
@@ -1115,20 +1031,7 @@ margin-left: 22px;
 .bizkimik .b-right .card {
   border-radius: 3px 40px 3px 40px;
 }
-.bizkimik .b-right .card h1 {
-  border-radius: 3px 45px 3px 45px;
-  width: 110px;
-  height: 96%;
-  position: absolute;
-  right: 1%;
-  top: 2%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 100;
-  color: #fff;
-  font-size: 22px;
-}
+
 
 .bizkimik .card .top-left {
   position: absolute;
@@ -1138,13 +1041,6 @@ margin-left: 22px;
   transform: scale(1, 1);
 }
 
-.bizkimik .card .center-slash {
-  font-size: 24px;
-  font-weight: bold;
-  transform: rotate(15deg) scale(1.2, 1.5); /* Döndər və uzat */
-  transform-origin: center;
-}
-
 .bizkimik .card .bottom-right {
   position: absolute;
   bottom: 0;
@@ -1152,48 +1048,35 @@ margin-left: 22px;
   font-size: 35px;
   transform: scale(1, 1);
 }
-.bizkimik .b-left .card h1 {
-  border-radius: 40px 3px 40px 3px;
-  width: 90px;
-  height: 90%;
-  position: absolute;
-  left: 7px;
-  top: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 100;
-  color: #fff;
-  font-size: 22px;
-}
-.bizkimik .cardb1 h1 {
+
+.bizkimik .cardb1 h6 {
  background: linear-gradient(to right,#9178bf, #dc58c8);
 }
-.bizkimik .cardb2 h1 {
+.bizkimik .cardb2 h6 {
   background: linear-gradient(to right,#6e51a4, #823dbb);
  }
- .bizkimik .cardb3 h1 {
+ .bizkimik .cardb3 h6 {
   background: linear-gradient(to right,#5846b5, #463587);
  }
- .bizkimik .cardb4 h1 {
+ .bizkimik .cardb4 h6 {
   background: linear-gradient(to right,#597ecf, #6b778a);
  }
- .bizkimik .cardb5 h1 {
+ .bizkimik .cardb5 h6 {
   background: linear-gradient(to right,#479cb1, #4ac3e2);
  }
- .bizkimik .cardb6 h1 {
+ .bizkimik .cardb6 h6 {
   background: linear-gradient(to right,#b14765, #e53544);
  }
- .bizkimik .cardb7 h1 {
+ .bizkimik .cardb7 h6 {
   background: linear-gradient(to right,#da8f27, #e87612);
  }
- .bizkimik .cardb8 h1 {
+ .bizkimik .cardb8 h6 {
   background: linear-gradient(to right,#d4cb25, #dfcf29);
  }
- .bizkimik .cardb9 h1 {
+ .bizkimik .cardb9 h6 {
   background: linear-gradient(to right,#79e784, #4db856);
  }
- .bizkimik .cardb10 h1 {
+ .bizkimik .cardb10 h6 {
   background: linear-gradient(to right,#479cb1, #34884d);
  }
 .bizkimik .cardb1 {
@@ -1275,8 +1158,8 @@ margin-left: 22px;
 
 
 
-.meqsedimiz .fa-circle-xmark {
-  font-size: 40px;
+.meqsedimiz .fa-xmark {
+  font-size: 30px;
   position: fixed;
   top: 30px;
   right: 30px;
@@ -1361,8 +1244,8 @@ font-size: 18px;
   transform: scale(1); /* Normal boyuta gelir */
 }
 
-.vakansiya .fa-circle-xmark {
-  font-size: 40px;
+.vakansiya .fa-xmark {
+  font-size: 30px;
   position: fixed;
   top: 30px;
   right: 30px;
@@ -1462,15 +1345,16 @@ align-items: center;
   align-items: center;
 }
 .p-left h3 {
-  margin-left: 20px;
+  margin-left: 35px;
 }
 .p-right p {
 font-size: 13px;
 padding: 20px;
 border-left: 1px solid #fff;
+text-align: justify;
 }
-.partners .fa-circle-xmark {
-  font-size: 40px;
+.partners .fa-xmark {
+  font-size: 30px;
   position: fixed;
   top: 10px;
   right: 10px;
@@ -1482,8 +1366,8 @@ border-left: 1px solid #fff;
   height: 20vh;
   position: absolute;
   bottom: 20px;
+padding: 0 30px;
 }
-
 .swiper-slide {
   background-color: transparent;
   text-align: center;
@@ -1496,230 +1380,195 @@ border-left: 1px solid #fff;
   width: 100%;
 }
 
+.right1-container img,
+.right2-container img,
+.right3-container img,
+.right4-container img {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7) !important; /* Kalın gölge */
+  transition: box-shadow 0.3s ease-in-out;
+}
 
-.meqaleler {
-  background-color: #021528;
+.right1-container img:hover,
+.right2-container img:hover,
+.right3-container img:hover,
+.right4-container img:hover {
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.9) !important;
+}
+
+
+
+/* about starts*/
+
+.about {
   height: 100vh;
-  background-size: cover;
+background: url('./images/about/about-bg.jpg');
+}
+.about .hexagon-cards .gfc-h1 {
+  position: absolute;
+  font-size: 35px;
+  text-decoration: none;
+  top: 37%;
+  left: 19%;
+  font-weight: 800;
+  color: #002c58;
+}
+.about .hexagon-cards {
+  width: 100%;
+  height: 100%;
+  display: flex;
   position: relative;
 }
-.meqaleler video {
-height: 100vh;
-}
-.meqaleler .container {
+.about .hexagon-cards .card {
+  width: 270px;
+  height: 290px;
   position: absolute;
-  top: 0;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(57, 50, 117, 0.17) 0px -23px 25px 0px inset, rgba(50, 51, 99, 0.15) 0px -36px 30px 0px inset, rgba(59, 83, 186, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;  
+  transition: all 0.3s;
+  color: #002c58;
+  background-color: #d5deef;
+  cursor: pointer;
 }
-.mg-left .mg-left-img {
-  width: 200px;
+.about .hexagon-cards .card:hover {
+  transform: scale(1.1);
+  background-color: #f2f2f2;
+}
+.about .hexagon-cards .card1 {
+  top: 5%;
+right: 30%;
+}
+.about .hexagon-cards .card2 {
+  top: 34%;
+right: 20%;
+}
+.about .hexagon-cards .card3 {
+  top: 63%;
+  right: 30%;
+}
+.about .hexagon-cards .card4 {
+  top: 63%;
+ right: 51%;
+}
+.about .hexagon-cards .img-card{
+  position: relative;
+  width: 100%;
+  height: 100%;
+margin: 37vh 42vw;
+}
+.about .hexagon-cards .img-card img {
+  position: absolute;
   border-radius: 50%;
+  width: 250px;
+  box-shadow: rgba(252, 252, 252, 0.8) 0px 32px 70px 4px;
 }
-.mg-left {
+.about .hexagon-cards h1 {
+  font-size: 13px;
+  margin-top: 10px;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.about .hexagon-cards .card img {
+  width: 100px;
+  border-radius: 50%;
+  margin-top: 10px;
+  border: 5px solid #002c58;
+}
+
+/* about ends */
+
+
+/* trainings start */
+
+.trainings {
+  height: 100vh;
+  background-color: #b1c9ef;
+}
+.training-left , .training-right {
   height: 100vh;
   display: flex;
   justify-content: center;
-align-items: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50px;
+}
+.trainings .training-left .card {
+  height: 33.3%;
+  width: 100%;
+  margin-left: 10px;
+  margin-bottom: 2px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.training-right .video-background {
+ width: 100%;
+ height: 100%;
+ position: relative;
+}
+.training-right video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.video-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 79, 204, .2);
+  z-index: 10; 
+  border-radius: 20px;
+}
+.trainings .training-card1 {
+  background: url('./images/telimler/telim.jpeg');
+  background-size: cover;
+  object-fit: cover;
+}
+.trainings .training-card2 {
+  background: url('./images/telimler/telim3.jpeg');
+  background-size: cover;
+  object-fit: cover;
+}
+.trainings .training-card3 {
+  background: url('./images/telimler/telimci1.jpeg');
+  background-size: cover;
+  object-fit: cover;
+}
+.trainings .training-left h5 {
+  position: absolute;
+top: 30px;
+left: 10px;
+font-size: 25px;
+text-transform: capitalize;
+font-weight: 500;
+color: #000;
+padding: 20px;
+background: #dddddd71;
+border-radius: 20px;
+
 }
 
 
-.mg-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.right1-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 22px; /* Fotoğraf ile çerçeve arasındaki mesafe */
-  border: 3px solid #fff; /* Dairevi çizgi (border) */
-  border-right: none;
-  border-top: none;
-  border-bottom: none;
-  height: 80px;
-  margin-bottom: 30px;
-  cursor: pointer;
-}
-.mg-right .right1 {
-  flex-direction: column;
-  padding: 10px 200px;
-  background-color: #fff;
-  margin: 30px 0;
-  border-top-right-radius: 150px;
-  border-bottom-right-radius: 150px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  display: flex;
- position: relative;
- border: 1px solid #002c58;
- color: #002c58;
-}
-.right1 p {
-  font-size: 10px;
-  white-space: nowrap;
-}
 
-.mg-right .img1 {
-  height: 120%;
-  border-radius: 50%;
-  position: absolute;
-  top: -10px;
-  left: 40px;
-  object-fit: cover; /* Fotoğrafın daireyi doldurması için */
-  border: 10px solid rgb(0, 44, 88, .7); /* Transparan border */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Küçük gölge */
-}
-.mg-right .img2 {
-  height: 120%;
-  border-radius: 50%;
-  position: absolute;
-  top: -10px;
-  left: 40px;
-  object-fit: cover; /* Fotoğrafın daireyi doldurması için */
-  border: 10px solid rgb(0, 44, 88, .7); /* Transparan border */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Küçük gölge */
-}
-.mg-right .img3 {
-  height: 120%;
-  border-radius: 50%;
-  position: absolute;
-  top: -10px;
-  left: 40px;
-  object-fit: cover; /* Fotoğrafın daireyi doldurması için */
-  border: 10px solid rgb(0, 44, 88, .7); /* Transparan border */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Küçük gölge */
-}
-.mg-right .img4 {
-  height: 120%;
-  border-radius: 50%;
-  position: absolute;
-  top: -10px;
-  left: 40px;
-  object-fit: cover; /* Fotoğrafın daireyi doldurması için */
-  border: 10px solid rgb(0, 44, 88, .7); /* Transparan border */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Küçük gölge */
-}
-.right2-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 25px; /* Fotoğraf ile çerçeve arasındaki mesafe */
-  border: 3px solid #fff; /* Dairevi çizgi (border) */
-  border-right: transparent;
-  border-top: transparent;
-  border-bottom: transparent;
-  height: 80px;
-  margin-bottom: 30px;
-  margin-left: 90px;
-  cursor: pointer;
-}
-.right2 p {
-  font-size: 10px;
-  white-space: nowrap;
-}
-.mg-right .right2 {
-  flex-direction: column;
-  padding: 10px 200px;
-  background-color: #fff;
-  margin: 30px 0;
-  border-top-right-radius: 150px;
-  border-bottom-right-radius: 150px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  display: flex;
- position: relative;
- border: 1px solid #002c58;
- color: #002c58;
-}
-.right3-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 25px; /* Fotoğraf ile çerçeve arasındaki mesafe */
-  border: 3px solid #fff; /* Dairevi çizgi (border) */
-  border-right: transparent;
-  border-top: transparent;
-  border-bottom: transparent;
-  height: 80px;
-  margin-bottom: 30px;
-  margin-left: 90px;
-  cursor: pointer;
-}
-.mg-right .right3 {
-  flex-direction: column;
-  padding: 10px 200px;
-  background-color: #fff;
-  margin: 30px 0;
-  border-top-right-radius: 150px;
-  border-bottom-right-radius: 150px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  display: flex;
- position: relative;
- border: 1px solid #002c58;
- color: #002c58;
-}
-.right3 p {
-  font-size: 10px;
-  white-space: nowrap;
-}
-.right4-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 25px; /* Fotoğraf ile çerçeve arasındaki mesafe */
-  border: 3px solid #fff; /* Dairevi çizgi (border) */
-  border-right: transparent;
-  border-top: transparent;
-  border-bottom: transparent;
-  height: 80px;
-  margin-bottom: 30px;
-  cursor: pointer;
-}
-.mg-right .right4 {
-  flex-direction: column;
-  padding: 10px 200px;
-  background-color: #fff;
-  margin: 30px 0;
-  border-top-right-radius: 150px;
-  border-bottom-right-radius: 150px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  display: flex;
- position: relative;
- border: 1px solid #002c58;
- color: #002c58;
-}
-.right4 p {
-  font-size: 10px;
-  white-space: nowrap;
-}
-.long-line1 {
-  margin-left: 20px;
-  width: 150%;
-  height: 2px;
-  background-color: #002c58; /* Çizginin rengi */
-}
-.vertical-line1 {
-  height: 200px; /* Dikey çizginin yüksekliği */
-  width: 2px;
-  background-color: #002c58; /* Çizginin rengi */
-  margin-left: 20px; /* Yatay çizgi ile dikey çizgi arasındaki mesafe */
-}
-.circle-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px; /* Fotoğraf ile çerçeve arasındaki mesafe */
-  border: 25px solid #fff; /* Dairevi çizgi (border) */
-  border-radius: 50%; /* Çerçeveyi dairesel yapmak için */
-  border-left: transparent;
-  border-bottom: transparent;
-  border-top: transparent;
-}
 
-/* blog */
+
+
+
+
+
+
+/* trainings end */
+
+
+
+/* blog starts */
+
 .blog {
   height: 100vh;
 }
@@ -1741,7 +1590,11 @@ align-items: center;
   border-radius: 30px;
 width: 14vw;
 }
-/* footer */
+/* blog ends */
+
+
+
+/* footer starts*/
 .footer {
   height: 25vh;
 background-color: #002c58;
@@ -1764,6 +1617,8 @@ background-color: #002c58;
   color: #fff;
   padding: 0 12px;
 }
+/* footer ends */
+
 
 @media screen and (max-width: 678px) {
   .slider .list .item .content {
@@ -1838,35 +1693,8 @@ display: none !important;
   bottom: 25px;
   right: 20px;
 }
-.telimler .container .card {
-  width: 300px;
-  height: 420px;
-}
-.telimler .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.telimler {
-  height: 252vh;
-}
-.telimler .card:hover {
-  width: 350px !important;
-}
-.telimler .card:first-child {
-  margin-top: 100px;
-}
-.telimler .card:hover .intro {
-  height: 100%;
-  width: 100%;
-}
-.telimler .card:hover .card img {
-  width: 100%;
-}
-.telimler p {
-  font-size: 11px !important;
-}
+
+
 .footer img {
   margin-top: 50px;
 }
