@@ -1442,8 +1442,8 @@ z-index: 1;
   position: relative;
 }
 .about .hexagon-cards .card {
-  width: 270px;
-  height: 290px;
+  width: 220px;
+  height: 240px;
   position: absolute;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   display: flex;
@@ -1451,8 +1451,8 @@ z-index: 1;
   align-items: center;
   box-shadow: rgba(57, 50, 117, 0.17) 0px -23px 25px 0px inset, rgba(50, 51, 99, 0.15) 0px -36px 30px 0px inset, rgba(59, 83, 186, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;  
   transition: all 0.3s;
-  color: #002c58;
-  background-color: #d5deef;
+  color: #ddd;
+  background-color: #002c58;
   cursor: pointer;
 }
 .about .hexagon-cards .card:hover {
@@ -1479,12 +1479,12 @@ right: 20%;
   position: relative;
   width: 100%;
   height: 100%;
-margin: 37vh 42vw;
+margin: 36vh 45vw;
 }
 .about .hexagon-cards .img-card img {
   position: absolute;
   border-radius: 50%;
-  width: 250px;
+  width: 220px;
   box-shadow: rgba(252, 252, 252, 0.8) 0px 32px 70px 4px;
 }
 .about .hexagon-cards h1 {
@@ -1495,7 +1495,7 @@ margin: 37vh 42vw;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 .about .hexagon-cards .card img {
-  width: 100px;
+  width: 80px;
   border-radius: 50%;
   margin-top: 10px;
   border: 5px solid #002c58;
@@ -1508,7 +1508,7 @@ margin: 37vh 42vw;
 
 .trainings {
   height: 100vh;
-  background-color: #b1c9ef;
+  background-color: #a1c6eb;
 }
 .training-left , .training-right {
   height: 100vh;
@@ -1519,12 +1519,14 @@ margin: 37vh 42vw;
   border-radius: 50px;
 }
 .trainings .training-left .card {
-  height: 33.3%;
+  height: 30%;
   width: 100%;
   margin-left: 10px;
-  margin-bottom: 2px;
   border-radius: 40px;
   cursor: pointer;
+}
+.trainings .training-left {
+  gap: 25px;
 }
 .training-right .video-background {
  width: 100%;
@@ -1594,7 +1596,8 @@ border-radius: 20px;
 
 .blog {
   height: 100vh;
-  background: url('./images/telimler/about-bg.jpg');
+  background: url('./images/blog/blog-bg');
+  background-size: cover;
 }
 .blog .blog-cards .row {
   display: flex;
