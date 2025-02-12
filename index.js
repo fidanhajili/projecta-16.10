@@ -10,73 +10,73 @@
     document.querySelector('.curtain-menu').classList.remove('aktiv')
  })
  
-//  const right1 = document.querySelector('.right1')
-//  const bizx = document.querySelector('.biz-x-mark')
-//  const right2 = document.querySelector('.right2')
-//  const meqsedx = document.querySelector('.meqsed-x-mark')
-//  const right3 = document.querySelector('.right3')
-//  const vakx = document.querySelector('.vak-x-mark')
-//  const right4 = document.querySelector('.right4')
-//  const partnersx = document.querySelector('.partners-x-mark')
+ const hexagonCard1 = document.querySelector('.hg-card1')
+ const bizx = document.querySelector('.biz-x-mark')
+ const hexagonCard2 = document.querySelector('.hg-card2')
+ const meqsedx = document.querySelector('.meqsed-x-mark')
+ const hexagonCard3 = document.querySelector('.hg-card3')
+ const vakx = document.querySelector('.vak-x-mark')
+ const hexagonCard4 = document.querySelector('.hg-card4')
+ const partnersx = document.querySelector('.partners-x-mark')
 
 
  
-//  right1.addEventListener('click', function () {
-//  document.querySelector('.bizkimik').classList.add('aktiv')
-//  })
-//  bizx.addEventListener('click', function () {
-//     document.querySelector('.bizkimik').classList.remove('aktiv')
-//  })
+ hexagonCard1.addEventListener('click', function () {
+ document.querySelector('.bizkimik').classList.add('aktiv')
+ })
+ bizx.addEventListener('click', function () {
+    document.querySelector('.bizkimik').classList.remove('aktiv')
+ })
 
-//  right2.addEventListener('click', function () {
-//     document.querySelector('.meqsedimiz').classList.add('aktiv')
-//     })
-//     meqsedx.addEventListener('click', function () {
-//        document.querySelector('.meqsedimiz').classList.remove('aktiv')
-//     })
-
-
-//     right3.addEventListener('click', function () {
-//         document.querySelector('.vakansiya').classList.add('aktiv')
-//         })
-//         vakx.addEventListener('click', function () {
-//            document.querySelector('.vakansiya').classList.remove('aktiv')
-//         })
+ hexagonCard2.addEventListener('click', function () {
+    document.querySelector('.meqsedimiz').classList.add('aktiv')
+    })
+    meqsedx.addEventListener('click', function () {
+       document.querySelector('.meqsedimiz').classList.remove('aktiv')
+    })
 
 
+   hexagonCard3.addEventListener('click', function () {
+        document.querySelector('.vakansiya').classList.add('aktiv')
+        })
+        vakx.addEventListener('click', function () {
+           document.querySelector('.vakansiya').classList.remove('aktiv')
+        })
 
-//         right4.addEventListener('click', function () {
-//             document.querySelector('.partners').classList.add('aktiv')
-//             })
-//             partnersx.addEventListener('click', function () {
-//                document.querySelector('.partners').classList.remove('aktiv')
-//             })
+
+
+        hexagonCard4.addEventListener('click', function () {
+            document.querySelector('.partners').classList.add('aktiv')
+            })
+            partnersx.addEventListener('click', function () {
+               document.querySelector('.partners').classList.remove('aktiv')
+            })
 
 
 
             
-//             const swiper = new Swiper(".mySwiper", {
-//                 slidesPerView: "auto",
-//                 spaceBetween: 30,
-//                 autoplay: {
-//                     delay: 1000,
-//                     disableOnInteraction: false,
-//                   },
-//                 breakpoints: {
-//                     320: {
-//                       slidesPerView: 2,
-//                       spaceBetween: 20,
-//                     },
-//                     768: {
-//                       slidesPerView: 4,
-//                       spaceBetween: 40,
-//                     },
-//                     1024: {
-//                       slidesPerView: 8,
-//                       spaceBetween: 30,
-//                     },
-//                   },
-//               });
+            const swiper = new Swiper(".mySwiper", {
+                slidesPerView: "auto",
+                spaceBetween: 30,
+                autoplay: {
+                    delay: 1000,
+                    disableOnInteraction: false,
+                  },
+                breakpoints: {
+                    320: {
+                      slidesPerView: 2,
+                      spaceBetween: 20,
+                    },
+                    768: {
+                      slidesPerView: 4,
+                      spaceBetween: 40,
+                    },
+                    1024: {
+                      slidesPerView: 8,
+                      spaceBetween: 30,
+                    },
+                  },
+              });
 
               const headers = document.querySelectorAll(".accordion-header");
 
@@ -109,24 +109,25 @@
               function startCounters() {
                 counters.forEach((counter) => {
                   counter.innerText = "0";
-          
+              
                   const updateCounter = () => {
                     const target = +counter.getAttribute("data-target");
-                    const c = +counter.innerText;
-          
+                    const c = +counter.innerText.replace("+", ""); // Önceki + işaretini kaldır
+              
                     const increment = target / 1000;
-          
+              
                     if (c < target) {
-                      counter.innerText = `${Math.ceil(c + increment)}`;
+                      counter.innerText = `+${Math.ceil(c + increment)}`;
                       setTimeout(updateCounter, 1);
                     } else {
-                      counter.innerText = target;
+                      counter.innerText = `+${target}`;
                     }
                   };
-          
+              
                   updateCounter();
                 });
               }
+              
           
               // İlk sayfa yüklenmesinde çalıştır
               startCounters();
@@ -273,24 +274,27 @@ mhX.addEventListener('click', function () {
                 document.querySelector('.huquqdetails').classList.remove('aktiv')
                   })
 
-// telimler
+// trainings
+const trainingCards = document.querySelectorAll('.training-left .card');
+const trainingSections = document.querySelectorAll('.training-right .training1, .training-right .training2, .training-right .training3'); // Yalnız training1, training2, training3
 
-(function() {
-    emailjs.init("YOUR_USER_ID");  // EmailJS kullanıcı ID'nizi buraya ekleyin
-})();
+trainingCards.forEach((card, index) => {
+  card.addEventListener('click', function() {
+    // Bütün training bölmələrini bağla
+    trainingSections.forEach(section => {
+      section.classList.remove('aktiv');
+    });
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    // Form verilerini gönder
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-        .then(function() {
-            alert('Message sent successfully!');
-        }, function(error) {
-            alert('Failed to send the message, please try again.');
-            console.log('Error:', error);
-        });
+    // Yalnız tıklanan kartın qarşılığı olan training bölməsini aç
+    document.querySelector(`.training${index + 1}`).classList.add('aktiv');
+  });
 });
 
+// Kapatma düymələri üçün
+const closeButtons = document.querySelectorAll('.training-right .fa-xmark');
 
-
+closeButtons.forEach(closeBtn => {
+  closeBtn.addEventListener('click', function() {
+    this.closest('.text').parentElement.classList.remove('aktiv');
+  });
+});
