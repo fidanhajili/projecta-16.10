@@ -224,7 +224,8 @@ font-style: italic;
   flex-direction: column;
   justify-content: center;
   color: #fff;
-  background-color: #649ad1;
+  background: url('/assets/images/about/collage-coins-pile-savings_23-2151589923.avif');
+  background-size: cover;
   position: fixed;
   top: 10%;
   left: 10%;
@@ -696,7 +697,6 @@ font-weight: 800;
   height: 100%;
   object-fit: cover;
   border-radius: 1px;
-  box-shadow: rgb(37, 28, 203) 0px 0px 0px 3px, rgba(255, 255, 255, 0.509) 0px 0px 0px 6px, rgb(37, 28, 203) 0px 0px 0px 9px;
 }
 
 
@@ -947,8 +947,8 @@ background-color: none;
   border-radius: 10px;
 }
 .bizkimik .b-right h6 {
-  width: 90%;
-  height: 70%;
+  width: 96%;
+  height: 85%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -956,10 +956,11 @@ background-color: none;
   border-bottom-left-radius: 30px;
   margin: 0;
   color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 .bizkimik .b-left h6 {
-  width: 90%;
-  height: 70%;
+  width: 96%;
+  height: 85%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -967,6 +968,7 @@ background-color: none;
   border-bottom-right-radius: 30px;
   margin: 0;
   color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 .bizkimik.aktiv {
   opacity: 1;
@@ -1166,6 +1168,7 @@ margin-left: 22px;
   background: linear-gradient(to right, #ffffff2a, #479cb1ae);
   padding: 30px 50px;
   border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 .accordion-item {
   background-color: transparent;
@@ -1183,6 +1186,7 @@ margin-left: 22px;
   border-radius: 35px;
   position: relative;
   color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .accordion-content {
@@ -1271,24 +1275,27 @@ font-size: 18px;
   font-size: 22px;
 }
 .vakansiya .gfc-text {
-  background-color:  rgb(221, 221, 221, .2);
+  background-color: #05427e3e;
+  border: 1px solid #05427e3e;
   padding: 20px 10px;
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
 }
+.vakansiya .vacancy-card h6 {
+  margin-left: 75px;
+  margin-top: -20px;
+}
+
 .vakansiya ul li {
   font-size: 15px;
-display: inline;
 padding: 5px 10px;
 border-radius: 7px;
+margin-left: 40px;
+margin-top: 5px;
+list-style:circle;
+background-color: #dddddd1e;
 }
-.vakansiya ul li:nth-child(1) { background-color: rgb(172, 210, 172, .7); 
-color: green;}
-.vakansiya ul li:nth-child(2) { background-color: rgb(245, 246, 158, .7);
-  color: rgb(255, 230, 0); }
-.vakansiya ul li:nth-child(3) { background-color: rgba(158, 234, 246, 0.7);
-  color: rgb(0, 238, 255); }
-.vakansiya ul li:nth-child(4) { background-color: rgba(201, 158, 246, 0.7);
-  color: rgb(123, 0, 255);  }
 
 
 .vakansiya a {
@@ -1306,10 +1313,13 @@ margin-top: 20px;
   margin-left: 10px;
 }
 .vakansiya .vacancy-card {
-  background-color: rgb(221, 221, 221, .2);
+  background-color: #05427e3e;
+  border: 1px solid #05427e3e;
   padding: 10px 20px;
   border-radius: 10px;
   margin: 20px 0;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
 }
 .vakansiya .vacancy-card i {
   font-size: 30px;
@@ -1549,16 +1559,15 @@ margin: 39vh 42vw;
 .training-left {
   height: 95vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   border-radius: 50px;
   margin-top: 5vh;
-  gap: 10px;
 }
 
 .trainings .training-left .card {
-  height: 33%;
+  height: 28vh;
   width: 100%;
   margin-left: 10px;
   border-radius: 40px;
