@@ -276,17 +276,20 @@ mhX.addEventListener('click', function () {
 
 // trainings
 const trainingCards = document.querySelectorAll('.training-left .card');
-const trainingSections = document.querySelectorAll('.training-right .training1, .training-right .training2, .training-right .training3'); // Yalnız training1, training2, training3
+const trainingSections = document.querySelectorAll('.training-right .training1, .training-right .training2, .training-right .training3');
 
 trainingCards.forEach((card, index) => {
-  card.addEventListener('click', function() {
+  card.addEventListener('click', function () {
     // Bütün training bölmələrini bağla
     trainingSections.forEach(section => {
       section.classList.remove('aktiv');
     });
 
-    // Yalnız tıklanan kartın qarşılığı olan training bölməsini aç
-    document.querySelector(`.training${index + 1}`).classList.add('aktiv');
+    // Yalnız tıklanan kartın karşılığı olan training bölməsini aç
+    const activeSection = document.querySelector(`.training-right .training${index + 1}`);
+    if (activeSection) {
+      activeSection.classList.add('aktiv');
+    }
   });
 });
 
@@ -294,7 +297,19 @@ trainingCards.forEach((card, index) => {
 const closeButtons = document.querySelectorAll('.training-right .fa-xmark');
 
 closeButtons.forEach(closeBtn => {
-  closeBtn.addEventListener('click', function() {
-    this.closest('.text').parentElement.classList.remove('aktiv');
+  closeBtn.addEventListener('click', function () {
+    const parentSection = this.closest('.training1, .training2, .training3');
+    if (parentSection) {
+      parentSection.classList.remove('aktiv');
+    }
   });
+});
+
+var swiper1 = new Swiper(".trainingSwiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
