@@ -1,6 +1,14 @@
 
-* {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+@font-face {
+  font-family: 'MyFont';
+  src: url('./fonts/worldwide-connection-blue-background-illustration-vector/License\ free.txt') format('woff2'),
+       url('./fonts/worldwide-connection-blue-background-illustration-vector/License\ premium.txt') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'MyFont', sans-serif;
 }
 
 /* header */
@@ -268,9 +276,12 @@ font-style: italic;
 .mhdetails h3, .vergidetails h3 , .auditdetails h3 , .hrdetails h3 , .ucotdetails h3 , .huquqdetails h3 {
 border-radius: 20px;
 background-color: rgb(0, 44, 88, .3);
-display: flex;
+display: inline-block;
+text-align: center;
 justify-content: center;
 align-items: center;
+margin: 0 auto;
+width: 800px;
 }
 .mhdetails .fa-xmark , .vergidetails .fa-xmark , .auditdetails .fa-xmark , .hrdetails .fa-xmark , .ucotdetails .fa-xmark  , .huquqdetails .fa-xmark {
   font-size: 30px;
@@ -328,6 +339,9 @@ font-weight: 800;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.mhdetails .mh-card1 h6 {
+  height: 125px;
 }
 .mhdetails .mh-cards1 .mh-card1 {
   background: linear-gradient(135deg, #fff, #bbcb119c, #c2bc16b4);
@@ -937,7 +951,7 @@ background-color: none;
   justify-content: center;
   align-items: center;
   color: #fff;
-background: url('./images/about/background1.jpg');
+background: url('./images/about/background1.jpeg');
   position: fixed;
   top: 10%;
   left: 10%;
@@ -988,8 +1002,7 @@ background: url('./images/about/background1.jpg');
 }
 .bizkimik .circle .h6b {
   border: transparent;
-  color: #021528;
-color: #002c58;
+  color: #fff;
 font-size: 12px;
 padding: 25px 10px 10px 10px;
 position: absolute;
@@ -999,7 +1012,7 @@ align-items: center;
 }
 .bizkimik .circle {
   border-radius: 50%;
-  background-color: #83baf1; /* Beyaz arka plan */
+  background-color: #245c94; /* Beyaz arka plan */
 box-shadow: 
   inset -10px -10px 20px rgba(255, 255, 255, 0.9), /* Üst kenara parlaklık */
   inset 10px 10px 20px rgba(0, 0, 0, 0.3),        /* Alt kenara koyu gölge */
@@ -1544,6 +1557,10 @@ margin: 39vh 42vw;
   margin-top: 10px;
   border: 5px solid #002c58;
 }
+.about .hexagon-cards .hg-card1 img {
+  width: 90px;
+  border: 10px solid #fff;
+}
 
 /* about ends */
 
@@ -1555,13 +1572,13 @@ margin: 39vh 42vw;
   background-color: #a1c6eb;
 }
 .training-right {
-  height: 95vh;
+  height: 92vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-radius: 50px;
-  margin-top: 5vh;
+  margin-top: 8vh;
 }
 .training-left {
   height: 95vh;
@@ -1737,15 +1754,20 @@ z-index: 999;
 }
 
 .blog .blog-cards1 {
-  height: 68vh;
-  gap: 10px;
+  height: 50vh;
 }
+.blog .row {
+  gap: 50px;
+  margin-left: 11vw;
+  margin-top: 10vh;
+}
+
 .blog .blog-cards2 {
-  height: 25vh;
-  gap: 20px;
+  height: 17vh;
+margin-top: 50px;
 }
 .blog .blog-card1 , .blog .blog-card2 , .blog .blog-card3 {
-  height: 68vh;
+  height: 50vh;
   background-color: #fff;
   border: 1px solid #000;
   border-radius: 30px;
@@ -1753,7 +1775,7 @@ z-index: 999;
 
 
 .blog .blog-card4 , .blog .blog-card5 , .blog .blog-card6 {
-height: 25vh;
+height: 17vh;
 background-color: #fff;
 border: 1px solid #000;
 border-radius: 30px;
