@@ -1502,10 +1502,10 @@ z-index: 1;
 
 .about .hexagon-cards .gfc-h1 {
   position: absolute;
-  font-size: 35px;
+  font-size: 50px;
   text-decoration: none;
-  top: 37%;
-  left: 23%;
+  top: 33%;
+  left: 15%;
   font-weight: 800;
   color: #002c58;
 }
@@ -1638,17 +1638,17 @@ margin: 39vh 42vw;
   border-radius: 20px;
 }
 .trainings .training-card1 {
-  background: url('./images/telimler/telim.jpeg');
+  background: url('./images/telimler/training-bg1.jpg');
   background-size: cover;
   object-fit: cover;
 }
 .trainings .training-card2 {
-  background: url('./images/telimler/telim3.jpeg');
+  background: url('./images/telimler/training-bg2.jpg');
   background-size: cover;
   object-fit: cover;
 }
 .trainings .training-card3 {
-  background: url('./images/telimler/telimci1.jpeg');
+  background: url('./images/telimler/training-bg3.jpg');
   background-size: cover;
   object-fit: cover;
 }
@@ -1675,38 +1675,24 @@ border-radius: 20px;
 color: #000;
 animation: growFromCenter 2s forwards; /* Animasiya tətbiq edilir */
 transform-origin: center;
+height: 580px;
 }
-.trainings .training-right .training2 .trainers-cards .tr-card .card-img img {
-  width: 230px;
-  border-radius: 40px;
-}
-.trainings .training-right .training2 .trainers-cards .tr-card .card-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-width: 250px;
-background-color: #002c5852;
-height: 440px;
-border-radius: 40px;
-}
-.trainings .training-right .training2 .trainers-cards .tr-card {
-height: 400px;
+.trainings .training-right .training2 .trainers-cards .swiper .tr-card {
+height: 450px;
 display: flex;
 justify-content: center;
 align-items: center;
+flex-direction: column;
+background-color: #dddddd76;
+border: 1px solid #dddddda3;
+border-radius: 50px;
+width: 300px;
 }
-.swiper-slide {
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  opacity: 0.6; /* Digər slaydlar bir az solğun görünəcək */
-}
+.trainings .training-right .training2 .trainers-cards .swiper .tr-card img {
 
-.swiper-slide.active-slide {
-  transform: scale(1.2); /* Ortadakı slaydı böyüdür */
-  opacity: 1; /* Aktiv slayd tam görünəcək */
-  z-index: 10; /* Önə çıxmasını təmin edir */
+height: 300px;
+border-radius: 50px;
 }
-
 
 
 @keyframes growFromCenter {
@@ -1753,11 +1739,6 @@ z-index: 999;
 
 
 
-
-
-
-
-
 /* trainings end */
 
 
@@ -1774,14 +1755,14 @@ z-index: 999;
   height: 50vh;
 }
 .blog .row {
-  gap: 20px;
-  margin-left: 24vw;
+  gap: 50px;
+  margin-left: 12vw;
   margin-top: 15vh;
 }
 
 .blog .blog-cards2 {
-  height: 15vh;
-margin-top: -3vh;
+  height: 13vh;
+margin-top: 10px;
 }
 .blog .blog-card1 , .blog .blog-card2 , .blog .blog-card3 {
   height: 45vh;
@@ -1792,18 +1773,11 @@ margin-top: -3vh;
 
 
 .blog .blog-card4 , .blog .blog-card5 , .blog .blog-card6 {
-height: 15vh;
+height: 13vh;
 background-color: #ffffff69;
 border: 1px solid #002c58;
 border-radius: 30px;
-width: 180px;
 }
-.blog-cards1 .blog-card1  {
-  width: 240px;
-}
- .blog-cards1 .blog-card2 , .blog-cards1 .blog-card3 {
-  width: 150px;
-  }
 
 
 

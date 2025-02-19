@@ -305,11 +305,28 @@ closeButtons.forEach(closeBtn => {
   });
 });
 
-var swiper1 = new Swiper(".trainingSwiper", {
-  slidesPerView: 3,
-  spaceBetween: 30,
+// slider
+
+var trainingswiper = new Swiper(".trainingSwiper", {
+  slidesPerView: 2,
+  spaceBetween: 50,
+  centeredSlides: true,
+  loop: true,
+  effect: "coverflow",
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 3,
+    slideShadows: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
+
