@@ -19,6 +19,18 @@
  const hexagonCard4 = document.querySelector('.hg-card4')
  const partnersx = document.querySelector('.partners-x-mark')
 
+ function closeAllActiveCards() {
+  document.querySelector('.bizkimik').classList.remove('aktiv');
+  document.querySelector('.meqsedimiz').classList.remove('aktiv');
+  document.querySelector('.vakansiya').classList.remove('aktiv');
+  document.querySelector('.partners').classList.remove('aktiv');
+}
+document.addEventListener('click', function (e) {
+  // Eğer tıklanan element .hg-card1, .hg-card2, .hg-card3 veya .hg-card4 değilse, tüm kartları kapat
+  if (!e.target.closest('.hg-card1') && !e.target.closest('.hg-card2') && !e.target.closest('.hg-card3') && !e.target.closest('.hg-card4')) {
+    closeAllActiveCards();
+  }
+});
 
  
  hexagonCard1.addEventListener('click', function () {
@@ -202,6 +214,23 @@ function moveSlider(direction) {
         }
     }, {once: true}) 
 }
+
+function closeAllDetails() {
+  document.querySelector('.mhdetails').classList.remove('aktiv');
+  document.querySelector('.vergidetails').classList.remove('aktiv');
+  document.querySelector('.auditdetails').classList.remove('aktiv');
+  document.querySelector('.hrdetails').classList.remove('aktiv');
+  document.querySelector('.ucotdetails').classList.remove('aktiv');
+  document.querySelector('.huquqdetails').classList.remove('aktiv');
+}
+
+document.addEventListener('click', function (e) {
+  // Eğer tıklanan element kartların dışındaki bir elementse, açık olan tüm kartları kapat
+  if (!e.target.closest('.mhetrafli') && !e.target.closest('.vergietrafli') && !e.target.closest('.auditetrafli') && !e.target.closest('.hretrafli') && !e.target.closest('.ucotetrafli') && !e.target.closest('.huquqetrafli')) {
+    closeAllDetails();
+  }
+});
+
  
 const mh = document.querySelector('.mhetrafli')
 const mhX = document.querySelector('.mh-x-mark')
@@ -306,6 +335,21 @@ closeButtons.forEach(closeBtn => {
 });
 
 // slider
+var descriptions = {
+  0: `+15 year experience, Audit license 
+15 ildən çox təcrübəsində müxtəlif fəaliyyət sahələri üzrə, baş mühasib, maliyyə departament dr. Audit departament dr. və Auditor kimi fəaliyyət göstərmişdir. 
+Dəfələrlər səyyar vergi yoxlamalarında şirkətləri təmsil etmiş, vergi və maliyyə-muhasibatlıq sahəsində uçot sistemləri qurmuşdur.
+`,
+  1: `+10 year experience, PMS
+2014 -ci ildən mühasib və baş mühasib olaraq bir necə böyük şirkətlərdə çalışmışdır. Ümimilikdə, idxal-ixrac, xidmət, satış, istehsalat müəsisələrində praktik olaraq muhasibat uçotnu aparmışdır. 
+ 
+`,
+  2: `+15 year experience, SHRM-CP, PMI
+İnsan resursları üzrə şöbə rəhbəri vəzifəsində 15 ildən çox təcrübəyə malik olan Dünya xanım, İstanbul Esenyurt Üniversitesi “kişisel gelişim ve eğitim”, “İnsan resurslarının idarəedilməsi” (SHRM-CP), “Achieving Happiness and Success” (PMI), AR Ədillə Akademiyası “Mediator” və s kimi sertifikatlar və əlavə təhsilə yiyələnmişdir. Həmçinin özəl və dövlət sektorlarıda daxil olmaqla AR Ali məhkəmədə, Vergilər Nazirliyində və s təlimlər vermişdir.`,
+  3: `+15 year experience, MBA, PMS
+Lokal və xarici (Amerika Birləşmiş Ştatlarında) təhsil və təcrübəyə malik olub 15 ildən çox mühasib və baş mühasib, maliyyə dr. olaraq bir necə böyük şirkətlərdə çalışmışdır. Ümimilikdə, bank, idxal-ixrac, tikinti, xidmət, satış, istehsalat müəsisələrində praktik olaraq muhasibat uçotnu aparmışdır. 
+`
+};
 
 var trainingswiper = new Swiper(".trainingSwiper", {
   slidesPerView: 2,
@@ -328,5 +372,11 @@ var trainingswiper = new Swiper(".trainingSwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  on: {
+    slideChange: function () {
+      let activeIndex = this.realIndex; // Gerçek aktif indexi al
+      document.getElementById("trainer-description").innerText = descriptions[activeIndex];
+    }
+  }
 });
 

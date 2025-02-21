@@ -42,7 +42,7 @@ position: relative;
   background-color: transparent;
   box-shadow: inset 0 0 10px rgba(161, 159, 159, 0.5);
 border: 1px solid rgb(255, 255, 255, .6);
-margin-top: 2px;
+margin-top: 6px;
 cursor: pointer;
 }
 #search::placeholder {
@@ -123,7 +123,7 @@ cursor: pointer;
   position: relative;
   display: inline-block;
   position: absolute;
-  top: 7%;
+  top: 6px;
   right: 300px;
 }
 
@@ -134,7 +134,7 @@ cursor: pointer;
   display: block;
   border: 1px solid rgb(255, 255, 255, .5);
   border-radius: 20px;
-  font-weight: 800;
+  font-weight: 300;
   box-shadow: inset 0 0 10px rgba(161, 159, 159, 0.5);
 }
 
@@ -1730,7 +1730,7 @@ transform-origin: center;
 height: 580px;
 }
 .trainings .training-right .training2 .trainers-cards .swiper .tr-card {
-height: 450px;
+height: 380px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -1743,45 +1743,22 @@ margin-left: 40px;
 overflow: hidden;
 }
 
-.tr-card .overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 300px;
-  height: 210px;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(100%); /* Aşağıda başlasın */
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  color: white;
-  padding: 20px;
-  border-radius: 50px;
-  margin-left: 40px;
-}
 
-.tr-card:hover .overlay {
-  opacity: 1;
-  transform: translateY(0); /* Yukarı çıksın */
-}
+
 .trainings .training-right .training2 .trainers-cards .swiper .tr-card img {
-margin-bottom: 200px;
-height: 200px;
+height: 300px;
 border-radius: 50px;
 border: 1px solid rgb(0, 0, 0, .3);
+margin-bottom: 20px;
 }
 .trainings .swiper-pagination {
 margin-right: 50px !important;
 }
-.trainings .overlay p {
-  font-size: 12px;
+
+.training2 #trainer-description {
+ margin-top: 20px;
 }
-.trainings .overlay-p2 {
-  font-size: 11px;
-}
+
 
 @keyframes growFromCenter {
   0% {
