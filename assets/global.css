@@ -116,6 +116,69 @@ cursor: pointer;
   display: block;
   z-index: 10;
 }
+
+
+/* 🔥 Dil Seçimi Dropdown */
+.language-dropdown {
+  position: relative;
+  display: inline-block;
+  position: absolute;
+  top: 7%;
+  right: 300px;
+}
+
+.language-btn {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  display: block;
+  border: 1px solid rgb(255, 255, 255, .5);
+  border-radius: 20px;
+  font-weight: 800;
+  box-shadow: inset 0 0 10px rgba(161, 159, 159, 0.5);
+}
+
+.language-content {
+  display: none;
+  position: absolute;
+  background-color: #002c58;
+  min-width: 50px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  box-shadow: inset 0 0 10px rgba(161, 159, 159, 0.5);
+  border: 1px solid rgb(255, 255, 255, .5);
+  margin-top: 5px;
+}
+
+.language-content a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-weight: 800;
+}
+
+.language-dropdown:hover .language-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.language-content a:hover {
+  background-color: #002c58;
+}
+
+.language-dropdown a::after {
+  display: none !important;
+}
+
 .fa-bars {
   display: block !important;
   font-size: 40px !important;
@@ -1638,7 +1701,7 @@ margin: 39vh 42vw;
   border-radius: 20px;
 }
 .trainings .training-card1 {
-  background: url('./images/telimler/training-bg1.jpg');
+  background: url('./images/telimler/training-bg1.jpeg');
   background-size: cover;
   object-fit: cover;
 }
@@ -1652,18 +1715,7 @@ margin: 39vh 42vw;
   background-size: cover;
   object-fit: cover;
 }
-.trainings .training-left h5 {
-  position: absolute;
-top: 30px;
-left: 10px;
-font-size: 25px;
-text-transform: capitalize;
-font-weight: 500;
-color: #000;
-padding: 20px;
-background: #dddddd71;
-border-radius: 20px;
-}
+
 .trainings .training1 .text , .trainings .training2 .text, .trainings .training3 .text {
   position: absolute;
 top: 10%;
@@ -1683,17 +1735,53 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-background-color: #dddddd76;
-border: 1px solid #dddddda3;
+background-color: rgba(255, 255, 255, 0.5);
+border: 1px solid rgb(0, 0, 0, .3);
 border-radius: 50px;
 width: 300px;
+margin-left: 40px;
+overflow: hidden;
+}
+
+.tr-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 210px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%); /* Aşağıda başlasın */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  color: white;
+  padding: 20px;
+  border-radius: 50px;
+  margin-left: 40px;
+}
+
+.tr-card:hover .overlay {
+  opacity: 1;
+  transform: translateY(0); /* Yukarı çıksın */
 }
 .trainings .training-right .training2 .trainers-cards .swiper .tr-card img {
-
-height: 300px;
+margin-bottom: 200px;
+height: 200px;
 border-radius: 50px;
+border: 1px solid rgb(0, 0, 0, .3);
 }
-
+.trainings .swiper-pagination {
+margin-right: 50px !important;
+}
+.trainings .overlay p {
+  font-size: 12px;
+}
+.trainings .overlay-p2 {
+  font-size: 11px;
+}
 
 @keyframes growFromCenter {
   0% {

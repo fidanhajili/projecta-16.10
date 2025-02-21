@@ -309,7 +309,7 @@ closeButtons.forEach(closeBtn => {
 
 var trainingswiper = new Swiper(".trainingSwiper", {
   slidesPerView: 2,
-  spaceBetween: 50,
+  spaceBetween: 30,
   centeredSlides: true,
   loop: true,
   effect: "coverflow",
