@@ -2062,7 +2062,7 @@ box-shadow: rgba(200, 200, 202, 0.25) 0px 30px 60px -12px, rgba(187, 185, 185, 0
 }
 
 @media(max-width:576px) { * {
-  overflow-x: hidden;
+  overflow: hidden;
 }
  .header .nav-links {
 display: none !important;
@@ -2071,7 +2071,7 @@ display: none !important;
   height: 10vh;
 }
 .introduction {
-height: 70vh;
+height: 50vh;
 }
  .xidmet .slider  h1 {
   font-weight: 800;
@@ -2079,29 +2079,31 @@ height: 70vh;
   bottom: 25px;
   right: 20px;
 }
-
+.about {
+  height: 70vh;
+}
 .about .hexagon-cards .card {
-  width: 180px;
-  height: 200px;
+  width: 120px;
+  height: 140px;
 }
 .about .hexagon-cards .card img {
-  width: 10px;
+display: none;
 }
 .about .img-card img {
   display: none;
 }
 .about .gfc-h1 {
-font-size: 28px !important;
-margin-top: 90px !important;
+font-size: 22px !important;
+margin-top: 60px !important;
 }
 .about .hexagon-cards .hg-card1 {
-right: 110px;
+right: 80px;
  }
 .about .hexagon-cards .hg-card2 {
  right: 10px;
 }
 .about .hexagon-cards .hg-card3 {
-  right: 110px;
+  right: 80px;
  }
  .about .hexagon-cards .hg-card4 {
   left: 50px;
@@ -2109,6 +2111,12 @@ right: 110px;
 .experience .counter {
   font-size: 22px;
 }
+.experience .counter-container span {
+  font-size: 16px;
+}
+
+
+
 
 }
 
