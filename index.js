@@ -370,7 +370,7 @@ Dəfələrlər səyyar vergi yoxlamalarında şirkətləri təmsil etmiş, vergi
  
 `,
   2: `<span class="highlight">+15 year experience, SHRM-CP, PMI</span>
-İnsan resursları üzrə şöbə rəhbəri vəzifəsində 15 ildən çox təcrübəyə malik olan Dünya xanım, İstanbul Esenyurt Üniversitesi “kişisel gelişim ve eğitim”, “İnsan resurslarının idarəedilməsi” (SHRM-CP), “Achieving Happiness and Success” (PMI), AR Ədillə Akademiyası “Mediator” və s kimi sertifikatlar və əlavə təhsilə yiyələnmişdir. Həmçinin özəl və dövlət sektorlarıda daxil olmaqla AR Ali məhkəmədə, Vergilər Nazirliyində və s təlimlər vermişdir.`,
+Özəl və dövlət müəssisələrində insan resursları üzrə şöbə rəhbəri vəzifəsində 15 ildən çox təcrübəyə malik olan Dünya xanım “Kişisel gelişim ve eğitim” (İstanbul Esenyurt Üniversitesi), “İnsan resurslarının idarəedilməsi” (SHRM-CP), “Achieving Happiness and Success” (PMI), “Ailə və əmək məsələləri üzrə mediator” (AR Ədliyyə Akademiyası) və s. kimi sertifikatlara və əlavə təhsilə yiyələnmişdir. Həmçinin, özəl və dövlət sektorlarında (AR Ali Məhkəməsi, AR Vergilər Nazirliyi də daxil olmaqla) çoxsaylı təlimlər vermişdir.`,
   3: `<span class="highlight">+15 year experience, MBA, PMS</span>
 Lokal və xarici (Amerika Birləşmiş Ştatlarında) təhsil və təcrübəyə malik olub 15 ildən çox mühasib və baş mühasib, maliyyə dr. olaraq bir necə böyük şirkətlərdə çalışmışdır. Ümimilikdə, bank, idxal-ixrac, tikinti, xidmət, satış, istehsalat müəsisələrində praktik olaraq muhasibat uçotnu aparmışdır. 
 `
