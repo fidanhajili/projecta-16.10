@@ -2061,7 +2061,9 @@ box-shadow: rgba(200, 200, 202, 0.25) 0px 30px 60px -12px, rgba(187, 185, 185, 0
   }
 }
 
-@media(max-width:576px) {
+@media(max-width:576px) { * {
+  overflow-x: hidden;
+}
  .header .nav-links {
 display: none !important;
  }
