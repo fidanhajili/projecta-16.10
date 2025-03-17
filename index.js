@@ -474,3 +474,5 @@ updateCurrencyRates();
 
 // Hər 30 saniyədə bir məlumatları yenilə
 setInterval(updateCurrencyRates, 30000);
+
+
