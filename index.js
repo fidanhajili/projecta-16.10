@@ -412,55 +412,65 @@ var trainingswiper = new Swiper(".trainingSwiper", {
 });
 
 //  blog 
-      // Bugünün tarixini alırıq
-      const currentDate = new Date();
-      const formattedDate = currentDate.toLocaleDateString('az-AZ');
-      document.getElementById("current-date").innerText = `${formattedDate}`;
+     // Bugünün tarixini alırıq
+const currentDate = new Date();
+const formattedDate = currentDate.toLocaleDateString('az-AZ');
+document.getElementById("current-date").innerText = `${formattedDate}`;
 
-      // API açarınızı daxil edin
-      const apiKey = '416789f71cf24455f40864b4';
+// API açarınızı daxil edin
+const apiKey = 'YOUR_API_KEY'; // Burada API açarınızı daxil edin
 
-      // Valyutaların AZN qarşısında qiymətini almaq üçün API URL-ləri
-      const usdToAznUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/pair/USD/AZN`;
-      const eurToAznUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/pair/EUR/AZN`;
-      const tryToAznUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/pair/TRY/AZN`;
-      const rubToAznUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/pair/RUB/AZN`; // RUB üçün əlavə URL
+// Valyutaların AZN qarşısında qiymətini almaq üçün API URL-ləri
+const usdToAznUrl = `https://free.currconv.com/api/v7/convert?q=USD_AZN&compact=ultra&apiKey=${apiKey}`;
+const eurToAznUrl = `https://free.currconv.com/api/v7/convert?q=EUR_AZN&compact=ultra&apiKey=${apiKey}`;
+const tryToAznUrl = `https://free.currconv.com/api/v7/convert?q=TRY_AZN&compact=ultra&apiKey=${apiKey}`;
+const rubToAznUrl = `https://free.currconv.com/api/v7/convert?q=RUB_AZN&compact=ultra&apiKey=${apiKey}`;
 
-      async function fetchData(url) {
-          try {
-              const response = await fetch(url);
-              const data = await response.json();
-              return data;
-          } catch (error) {
-              console.error("Xəta:", error);
-              return null;
-          }
-      }
+async function fetchData(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("Məlumat alınmadı");
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Xəta:", error);
+        return null;
+    }
+}
 
-      async function updateCurrencyRates() {
-          const usdToAznData = await fetchData(usdToAznUrl);
-          const eurToAznData = await fetchData(eurToAznUrl);
-          const tryToAznData = await fetchData(tryToAznUrl);
-          const rubToAznData = await fetchData(rubToAznUrl); // RUB məlumatı
+async function updateCurrencyRates() {
+    const usdToAznData = await fetchData(usdToAznUrl);
+    const eurToAznData = await fetchData(eurToAznUrl);
+    const tryToAznData = await fetchData(tryToAznUrl);
+    const rubToAznData = await fetchData(rubToAznUrl);
 
-          const usdRate = usdToAznData?.conversion_rate;
-          const eurRate = eurToAznData?.conversion_rate;
-          const tryRate = tryToAznData?.conversion_rate;
-          const rubRate = rubToAznData?.conversion_rate; // RUB qiyməti
+    // Əgər məlumatlar alınmazsa, yenidən sorğu göndəririk
+    if (!usdToAznData || !eurToAznData || !tryToAznData || !rubToAznData) {
+        setTimeout(updateCurrencyRates, 5000); // 5 saniyədən sonra yenidən cəhd et
+        return;
+    }
 
-          const htmlContent = `
-              <div class="left">
-                  <p>1 USD = <strong>${usdRate || "Məlumat yoxdur"} AZN</strong></p>
-                  <p>1 EUR = <strong>${eurRate || "Məlumat yoxdur"} AZN</strong></p>
-              </div>
-              <div class="right">
-                  <p>1 TRY = <strong>${tryRate || "Məlumat yoxdur"} AZN</strong></p>
-                  <p>1 RUB = <strong>${rubRate || "Məlumat yoxdur"} AZN</strong></p> <!-- RUB məlumatı -->
-              </div>
-          `;
+    const usdRate = usdToAznData?.USD_AZN;
+    const eurRate = eurToAznData?.EUR_AZN;
+    const tryRate = tryToAznData?.TRY_AZN;
+    const rubRate = rubToAznData?.RUB_AZN;
 
-          document.getElementById("currency-rates").innerHTML = htmlContent;
-      }
+    const htmlContent = `
+        <div class="left">
+            <p>1 USD = <strong>${usdRate || "Məlumat yoxdur"} AZN</strong></p>
+            <p>1 EUR = <strong>${eurRate || "Məlumat yoxdur"} AZN</strong></p>
+        </div>
+        <div class="right">
+            <p>1 TRY = <strong>${tryRate || "Məlumat yoxdur"} AZN</strong></p>
+            <p>1 RUB = <strong>${rubRate || "Məlumat yoxdur"} AZN</strong></p>
+        </div>
+    `;
 
-      // Məlumatları yüklə
-      updateCurrencyRates();
+    document.getElementById("currency-rates").innerHTML = htmlContent;
+}
+
+// İlk dəfə məlumatları yüklə
+updateCurrencyRates();
+
+// Hər 30 saniyədə bir məlumatları yenilə
+setInterval(updateCurrencyRates, 30000);

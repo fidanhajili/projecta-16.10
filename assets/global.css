@@ -763,6 +763,7 @@ font-weight: 800;
 
 .xidmet .description li {
   font-size: 17px;
+  list-style: disc;
 }
 
 .xidmet .content .title {
@@ -782,8 +783,8 @@ font-weight: 800;
 }
 
 .thumbnail .item {
-  width: 200px !important;
-  height: 200px !important;
+  width: 150px !important;
+  height: 150px !important;
   flex-shrink: 0;
   position: relative;
   cursor: pointer;
@@ -1902,15 +1903,13 @@ padding: 10px;
 .blog .blog-card6 p {
   font-size: 12px;
   color: #002c58;
+  padding: 2px 10px;
 }
 .blog-card6 .currency-container {
   display: flex;
-  justify-content: space-between; /* Sol və sağ arasında boşluq qoyar */
   width: 100%;
 }
-.blog-card6 .left, .blog-card6 .right {
-  width: 45%;
-}
+
 .blog .blog-card6 h6 {
   color: #002c58;
 }
@@ -2021,8 +2020,40 @@ box-shadow: rgba(200, 200, 202, 0.25) 0px 30px 60px -12px, rgba(187, 185, 185, 0
 }
 /* documents end */
 
-
-
+/* mobile-about */
+.mobile-about {
+  display: none;
+  height: 75vh;
+  background-color: #002c58;
+}
+.mobile-about .row {
+  gap: 20px;
+}
+.mobile-about .card {
+  height: 25vh;
+  background: rgb(24,27,145);
+background: linear-gradient(149deg, rgba(24,27,145,0.8702074579831933) 0%, rgba(33,88,143,1) 50%, rgba(208,233,245,0.444437149859944) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+  transition: transform 0.5s ease;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.mobile-about .card img {
+  width: 60px;
+  border-radius: 50%;
+}
+.mobile-about .card h5 {
+  font-size: 16px;
+  color: #fff;
+  padding: 20px;
+}
+.mobile-about .card:hover {
+  transform: scale(1.1);
+}
+/* mobile-about */
 
 
 
@@ -2065,9 +2096,11 @@ box-shadow: rgba(200, 200, 202, 0.25) 0px 30px 60px -12px, rgba(187, 185, 185, 0
   * {
     overflow-x: hidden;
   }
-  .about {
-  overflow: hidden;
-  background-size: contain;
+.about {
+  display: none;
+}
+.mobile-about {
+  display: block;
 }
  .header .nav-links {
 display: none !important;
@@ -2119,9 +2152,18 @@ right: 80px;
 .experience .counter-container span {
   font-size: 16px;
 }
-
-
-
-
+.xidmet .item button {
+  display: none;
+}
+.xidmet .item ul li {
+font-size: 15px;
+}
+.xidmet .item ul {
+  list-style: disc !important;
+  list-style-type: disc !important;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0 20px; 
+}
 }
 
