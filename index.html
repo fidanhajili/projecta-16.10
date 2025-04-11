@@ -34,7 +34,28 @@
 </head>
 
 <body>
-
+  <div class="background">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+ </div>
   <!-- header -->
   <div class="curtain-menu" style="animation-delay: 0.7s">
     <i class="fa-regular fa-circle-xmark" style="animation-delay: 0.7s"></i>
@@ -44,7 +65,7 @@
     <div class="mobile-links">
       <a href="#" style="animation-delay: 0.3s">Ana səhifə</a>
       <a href="#about" style="animation-delay: 0.4s">Haqqımızda</a>
-      <a href="#xidmet" style="animation-delay: 0.5s">Xidmətlər</a>
+      <a href="#xidmet-mobile" style="animation-delay: 0.5s">Xidmətlər</a>
       <a href="#trainings" style="animation-delay: 0.6s">Təlimlər</a>
       <a href="#blog" style="animation-delay: 0.7s">Faydalı</a>
       <a href="#" style="animation-delay: 0.8s">Əlaqə</a>
@@ -75,13 +96,14 @@
         </div>
 
          <!-- 🔥 Yeni Dil Seçimi Dropdown -->
-         <div class="language-dropdown">
+         <div class="language-dropdown ms-5">
           <a href="#" class="language-btn py-1 px-3"> AZ</a>
           <div class="language-content">
               <a href="?lang=en">EN</a>
               <a href="?lang=ru">RU</a>
           </div>
       </div>
+      
 
 
         <div class="search-container">
@@ -351,35 +373,55 @@
 
 
 <!-- mobile-about -->
- <section class="mobile-about pt-3">
-  <h2 class="text-center text-white py-4">Haqqımızda</h2>
-<div class="about-mob pt-3">
-  <div class="row">
-<div class="col card">
-  <img src="./assets/images/about/icon1.jpg" alt="">
-  <h5 class="py-2">Biz kimik?</h5>
-</div>
-<div class="col card">
-  <img src="./assets/images/meqale/icon2.jpeg" alt="">
-  <h5 class="py-2">Məqsədimiz</h5>
-</div>
-</div>
-</div>
+<section class="mobile-about py-2">
+  <h2 class="text-center py-4 fw-bold position-relative z-3">Haqqımızda</h2>
+  
+  <div class="container">
+    <div class="row g-2"> <!-- g-2: Bootstrap'te 10px boşluk bırakır -->
+      <div class="col-12">
+        <div class="card">
+          <img src="./assets/images/about/icon1.jpg" class="card-mob-img" alt="Biz kimik?">
+          <div class="card-body">
+            <h3 class="card-title">Biz kimik?</h3>
+              <a href="./aboutus.html">Daha Ətraflı <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-12">
+        <div class="card">
+          <img src="./assets/images/meqale/icon2.jpeg" class="card-mob-img" alt="Məqsədimiz">
+          <div class="card-body">
+            <h3 class="card-title">Məqsədimiz</h3>
+              <a href="./ourmission.html">Daha Ətraflı <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
 
-<div class="about-mob pt-4">
-  <div class="row">
-<div class="col card">
-  <img src="./assets/images/meqale/icon3.jpeg" alt="">
-    <h5 class="py-2">Vakansiyalarımız</h5>
-</div>
-<div class="col card">
-  <img src="./assets/images/meqale/icon4.jpeg" alt="">
-  <h5 class="text-center py-2">Əməkdaşlarımız</h5> 
-</div>
-</div>
-</div>
+      <div class="col-12">
+        <div class="card">
+          <img src="./assets/images/meqale/icon3.jpeg" class="card-mob-img" alt="Vakansiyalarımız">
+          <div class="card-body">
+            <h3 class="card-title">Vakansiyalarımız</h3>
+            <a href="./careers.html">Daha Ətraflı <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
 
- </section>
+      <div class="col-12">
+        <div class="card">
+          <img src="./assets/images/meqale/icon4.jpeg" class="card-mob-img" alt="Əməkdaşlarımız">
+          <div class="card-body">
+            <h3 class="card-title">Əməkdaşlarımız</h3>
+              <a href="./ourpartners.html">Daha Ətraflı <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- mobile-about -->
 
 <!-- about starts -->
@@ -643,6 +685,56 @@
   </div>
 
   <!-- xidmetler -->
+<div class="xidmet-mobile" id="xidmet-mobile">
+
+
+<div class="container mt-2">
+  <h1 class="text-center text-white py-4 fw-bold position-relative z-3">
+    Xidmətlərimiz
+  </h1>
+    <div class="row gx-3 gy-3">
+        <div class="col-6 py-1">
+            <div class="card text-center">
+              <img src="./assets/images/xidmetler/muhasibat-mob.png" alt="">
+                <a href="./accounting.html">Mühasibatlıq xidmətləri</a>
+            </div>
+        </div>
+        <div class="col-6 py-1">
+            <div class="card text-center">
+              <img class="vergi-mob" src="./assets/images/xidmetler/vergi-mob.png" alt="">
+              <a href="./tax.html">Vergi xidmətləri</a>
+
+            </div>
+        </div>
+        <div class="col-6 py-1">
+            <div class="card text-center">
+              <img src="./assets/images/xidmetler/audit-mob.png" alt="">
+                <a href="./audit.html">Audit xidmətləri</a>
+            </div>
+        </div>
+        <div class="col-6 py-1">
+            <div class="card text-center">
+              <img src="./assets/images/xidmetler/hr-mob.png" alt="">
+                <a href="./hr.html">HR xidmətləri</a>
+            </div>
+        </div>
+        <div class="col-6 py-1">
+            <div class="card text-center">
+              <img src="./assets/images/xidmetler/ucot-mob.png" alt="">
+                <a href="./report.html">Uçot proqramının tətbiqi</a>
+            </div>
+        </div>
+        <div class="col-6 py-1">
+            <div class="card text-center">
+              <img src="./assets/images/xidmetler/huquq-mob.png" alt="">
+                <a href="./legal.html">Hüquq xidmətləri</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
   <section id="xidmet" class="xidmet">
 
 
@@ -825,24 +917,27 @@
   </section>
 
 <!-- trainings-mobile -->
-<div class="trainings-mobile">
-<h1 class="text-white text-center pt-4 pb-3">Təlimlərimiz</h1>
-    <div class="training-mobile-cards">
-      <div class="card card1">
-
+<div class="tr-mobile position-relative z-3">
+  <div class="tr-mobile-container">
+    <div class="tr-mobile-row">
+      <div class="tr-mobile-card col-12">
+        <img src="./assets/images/telimler/training-bg1.jpeg" alt="Image 1">
+        <a href="./trainings-mob.html">Təlimlərimiz <i class="fa-solid fa-arrow-right"></i></a>
       </div>
-  
-  
-      <div class="card card2">
-  
+      <div class="tr-mobile-card col-12">
+        <img src="./assets/images/telimler/training-bg2.jpeg" alt="Image 2">
+        <a href="./trainers-mob.html">Təlimçilərimiz <i class="fa-solid fa-arrow-right"></i></a>
       </div>
-  
-  
-      <div class="card card3">
-  
+      <div class="tr-mobile-card col-12">
+        <img src="./assets/images/telimler/training-bg3.jpg" alt="Image 3">
+        <a>Coffee Break <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
+  </div>
+  
 </div>
+
+
 
   <!-- telimler -->
 <section class="trainings" id="trainings">
@@ -1001,7 +1096,7 @@
    </div>
     </div>
 
-    <div class="blog-cards2 py-5">
+    <div class="blog-cards2 py-2">
   <div class="row d-flex">
     <div class="blog-card4 col-3"></div>
     <div class="blog-card5 col-3">   <iframe 

@@ -1,14 +1,46 @@
- const mobileMenu = document.querySelector('.fa-bars')
- const closeMenu = document.querySelector('.fa-circle-xmark')
- 
- 
- mobileMenu.addEventListener('click', function() {
-    document.querySelector('.curtain-menu').classList.add('aktiv')
- })
- 
- closeMenu.addEventListener('click', function() {
-    document.querySelector('.curtain-menu').classList.remove('aktiv')
- })
+
+
+const mobileMenu = document.querySelector('.fa-bars');
+const closeMenu = document.querySelector('.fa-circle-xmark');
+const curtainMenu = document.querySelector('.curtain-menu');
+const menuLinks = document.querySelectorAll('.mobile-links a');
+
+mobileMenu.addEventListener('click', function() {
+    curtainMenu.classList.add('aktiv');
+});
+
+closeMenu.addEventListener('click', function() {
+    curtainMenu.classList.remove('aktiv');
+});
+
+// Menü içindeki linklere tıklanınca menüyü kapat ve ilgili bölüme kaydır
+menuLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href'); 
+
+        if (targetId.startsWith("#")) { // Eğer bağlantı bir ID'ye yönlendirme yapıyorsa
+            e.preventDefault(); // Varsayılan anchor link davranışını engelle
+            const targetSection = document.querySelector(targetId);
+
+            if (targetSection) {
+                curtainMenu.classList.remove('aktiv'); // Menüyü kapat
+
+                // Sayfanın ilgili bölüme yumuşak bir şekilde kaymasını sağla
+                window.scrollTo({
+                    top: targetSection.offsetTop - 50, // Başlık yüksekliği kadar boşluk bırak
+                    behavior: "smooth"
+                });
+            }
+        }
+    });
+});
+
+ document.querySelector('.language-btn').addEventListener('click', function(event) {
+  event.preventDefault(); // Sayfanın yenilənməsini qarşısını alır
+  const dropdown = document.querySelector('.language-dropdown');
+  dropdown.classList.toggle('active'); // Active class əlavə edərək dil seçimlərini açıb bağlayır
+});
+
  
  const hexagonCard1 = document.querySelector('.hg-card1')
  const bizx = document.querySelector('.biz-x-mark')
@@ -347,6 +379,9 @@ trainingCards.forEach((card, index) => {
   });
 });
 
+
+
+
 // Kapatma düymələri üçün
 const closeButtons = document.querySelectorAll('.training-right .fa-xmark');
 
@@ -474,5 +509,6 @@ updateCurrencyRates();
 
 // Hər 30 saniyədə bir məlumatları yenilə
 setInterval(updateCurrencyRates, 30000);
+
 
 
